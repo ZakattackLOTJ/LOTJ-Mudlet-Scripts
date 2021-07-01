@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage />
+	<TimerPackage />
+	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>LotJAutoTeach</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>TeachAdd</name>
+				<script>AddItemToList()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachadd (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>TargetAlias</name>
+				<script>SetTeachTarget()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachtarget (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>ToggleAuto</name>
+				<script>SetTeachAutoAccept()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachauto$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>StopTeaching</name>
+				<script>teachstop()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachstop$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>StopTeaching</name>
+				<script>ClearTeachList()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachstop$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>ToggleAutoAccept</name>
+				<script>SetTeachAutoAccept()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachauto (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>ShowTeachingInfo</name>
+				<script>ShowTeachTarget()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachshow$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>TeachListClear</name>
+				<script>ClearTeachList()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachclear$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>AddSciencesToList</name>
+				<script>AddSciencesToList()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachscience$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>TeachBegin</name>
+				<script>TeachSkill()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teach$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>TeachingShowList</name>
+				<script>ShowTeachList()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachlist$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>ShowTeachHelp</name>
+				<script>ShowCommands()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^teachhelp$</regex>
+			</Alias>
+		</AliasGroup>
+	</AliasPackage>
+	<ActionPackage />
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>LotJAutoTeach</name>
+			<packageName></packageName>
+			<script>scienceList = {"advanced electronics", "chemistry", "construction", "data", "destruction", "edibles", "education", "electronics","enhancement","equipment","forensics","guidance","machines","medical","minerals","narcotics","spacecraft", "study", "transportation"}
+teachList = {}
+teachTarget = ""
+teachFinished = true
+scienceListPosition = 1
+
+
+function AddItemToList()
+	if (matches[2] ~= nil) then
+		if (#teachList == 0) then
+			table.insert(teachList, 1, matches[2]) -- Make first entry
+			cecho("&lt;lawn_green&gt;- ".. matches[2].. " ADDED TO TEACHING LIST\n")
+			teachFinished = false
+		else
+			table.insert(teachList, matches[2]) -- Make subsequent entries
+			cecho("&lt;lawn_green&gt;- ".. matches[2].. " ADDED TO TEACHING LIST\n")
+		end -- if
+	else
+		cecho("&lt;red&gt;- Not Valid\n")
+	end -- if
+end -- function
+
+function AddSciencesToList()
+	cecho("&lt;lawn_green&gt;- ALL SCIENCES ADDED TO LIST\n")
+	for i, v in ipairs(scienceList) do
+		if (#teachList == 0) then
+			table.insert(teachList, 1, scienceList[i]) -- Make first entry
+			teachFinished = false
+		else
+			table.insert(teachList, scienceList[i]) -- Make subsequent entries
+		end -- if
+	end -- for	
+end -- function
+
+function ClearTeachList(matches)
+	teachList = {}
+	cecho("&lt;tomato&gt;- TEACHING LIST CLEARED\n")
+end -- function
+
+function IncrementSkillList(matches)
+	table.remove(teachList, 1)
+	if(#teachList &lt; 1) then
+		cecho("&lt;tomato&gt;- LIST FINISHED\n")
+	else
+		TeachSkill()
+	end -- if
+end -- function
+
+function SetTeachAutoAccept(matches)
+table.load(getMudletHomeDir().."/ScriptFiles/AutoTech/teachautoaccept.lua", teachautoaccept)
+-- Auto Accept can either be on, off or in stand by.
+-- In off it will autodeny.
+-- In on it will autoaccept.
+-- In standby it will do nothing.
+	if (matches[2] ~= nil) then
+		if (matches[2] == "on") then
+			accept = true
+			cecho("&lt;lawn_green&gt;- Auto Teach Accept Set to Accept\n")
+		elseif(matches[2] == "off") then
+			accept = false
+			cecho("&lt;tomato&gt;- Auto Teach Accept Set to Deny\n")
+		else
+			accept = nil
+			cecho("&lt;yellow&gt;- Auto Teach Accept Set to Standby\n")
+		end -- if
+	else
+		if (teachautoaccept) == "accept" then
+			accept = false
+			cecho("&lt;tomato&gt;- Auto Teach Accept Set to Deny\n")
+		elseif(teachautoaccept) == "deny" then
+			accept = nil
+			cecho("&lt;yellow&gt;- Auto Teach Accept Set to Standby\n")
+		elseif(teachautoaccept) == "neutral" then
+			accept = true
+			cecho("&lt;lawn_green&gt;- Auto Teach Accept Set to Accept\n")
+		end -- if
+	end -- if
+	if (accept == nil) then
+		table.save(getMudletHomeDir().."/ScriptFiles/AutoTech/teachautoaccept.lua", "neutral")
+	else
+		if (accept == true) then
+			table.save(getMudletHomeDir().."/ScriptFiles/AutoTech/teachautoaccept.lua", "accept")
+		else
+			table.save(getMudletHomeDir().."/ScriptFiles/AutoTech/teachautoaccept.lua", "deny")
+		end -- if
+	end -- if
+end -- function
+
+function SetTeachTarget()
+	if (matches[2] ~= nil) then
+		teachTarget = matches[2]
+		echo("- TEACHING TARGET SET TO ".. teachTarget)
+	end -- if
+end -- function
+
+function ShowTeachList(matches)
+	cecho("&lt;grey&gt;- THE TEACHING QUEUE CONTAINS: \n")
+	for i, v in ipairs(teachList) do
+		cecho("&lt;grey&gt;"..v.."\n")
+	end -- for
+end -- function
+
+function ShowTeachTarget(matches)
+	if (teachTarget ~= nil) then
+		cecho("&lt;grey&gt;- TEACHING TARGET IS: ".. teachTarget)
+	end -- if
+end -- function
+
+function TeachAccept(matches)
+table.load(getMudletHomeDir().."/ScriptFiles/AutoTech/teachautoaccept.lua", teachautoaccept)
+	if(teachautoaccept) == "accept" then
+		send("teach accept\n")
+	elseif(teachautoaccept) == "deny" then
+		send("teach deny\n")
+	end -- if
+end -- function
+
+function TeachSkill(matches)
+	if (teachTarget ~= "") then
+		if (#teachList &gt; 0) then
+			send("teach ".. teachTarget.. " ".. teachList[1])
+		else
+			cecho("&lt;tomato&gt;- TEACHING LIST EMPTY\n")
+		end -- if
+	else
+		cecho("&lt;tomato&gt;- NO TARGET SPECIFIED\n")
+	end -- if
+end -- function
+
+
+
+function TeachStart(matches)
+	enableTrigger("AlreadyKnowTrig")
+	enableTrigger("NotReadyTrig")
+	enableTrigger("TeachSuccess")
+	enableTrigger("FailTeach")
+	cecho("&lt;lawn_green&gt;- AUTOTEACHING ENABLED")
+end -- function
+
+function TeachStop(matches)
+	disableTrigger("AlreadyKnowTrig")
+	disableTrigger("NotReadyTrig")
+	disableTrigger("TeachSuccess")
+	disableTrigger("FailTeach")
+	cecho("&lt;tomato&gt;- AUTOTEACHING DISABLED")
+end -- function
+
+function ShowCommands(matches)
+	cecho("&lt;grey&gt;---AutoTeacher by @Ilyena---\n")
+	cecho("&lt;grey&gt;'teachtarget #' - Set the target to be taught.\n")
+	cecho("&lt;grey&gt;'teachshow' - Display which target is to be taught.\n")
+	cecho("&lt;grey&gt;'teachadd #' - Add an item to the teach queue.\n")
+	cecho("&lt;grey&gt;'teachlist' - Display the teaching queue.\n")
+	cecho("&lt;grey&gt;'teachscience' - Adds all the sciences to the teaching queue.\n")
+	cecho("&lt;grey&gt;'teachclear' - Clear the teach queue.\n")
+	cecho("&lt;grey&gt;'teachstop' - Stop the teaching queue.\n")
+	cecho("&lt;grey&gt;'teachauto (on/off/standby)' - Toggle. Set auto accept to accept, deny or standby.\n")
+end -- function</script>
+			<eventHandlerList />
+		</Script>
+	</ScriptPackage>
+	<KeyPackage />
+	<VariablePackage>
+		<HiddenVariables />
+		<Variable>
+			<name>autoTransition</name>
+			<keyType>4</keyType>
+			<value>false</value>
+			<valueType>1</valueType>
+		</Variable>
+		<VariableGroup>
+			<name>bestResult</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+			<Variable>
+				<name>about</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+			<Variable>
+				<name>head</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+		</VariableGroup>
+		<VariableGroup>
+			<name>comlinkList</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+		</VariableGroup>
+	</VariablePackage>
+</MudletPackage>

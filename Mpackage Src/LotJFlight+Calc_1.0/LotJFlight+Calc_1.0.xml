@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>LotJCalc</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ShowplanetSuccess</name>
+				<script>showplanetSuccess()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^You use the datapad to lookup the information\.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ShowplanetFailure</name>
+				<script>showplanetFailure()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^No such planet\.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>PlanetCap</name>
+				<script>planetCheck(matches[2])</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Planet\: (.*)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>SystemCap</name>
+				<script>setSystem(matches[2])</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Starsystem\: (.*)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>CoordCap</name>
+				<script>setCoords(matches[2], matches[3], matches[4])</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Coordinates\: (.*) (.*) (.*)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>CalcEnd</name>
+				<script>deleteLine()
+calculate()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Use \'SHOWPLANET \&lt;planet\&gt; RESOURCES\' for current resources\.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>GagAll</name>
+				<script>deleteLine()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+		</TriggerGroup>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>LotJFlight</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Flight</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>LaunchComp</name>
+					<script>calcPlanet()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Launch complete\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>CalcDone</name>
+					<script>calcDone()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^\[Status\]\: Hyperspace Calculations have been completed\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>HyperComp</name>
+					<script>coursePlanet()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Hyperjump complete\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>OrbitObtained</name>
+					<script>doLand()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You begin orbiting (.*)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>LandStarted</name>
+					<script>landing()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You begin to land on (.*)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>LandComp</name>
+					<script>endFlight()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Landing sequence complete\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Proximity</name>
+					<script>waitHyper()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You are too close to (.*) to make the jump to lightspeed\!$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>LandSiteLocked</name>
+					<script>landNext()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Restricted Landing pad\. Limited to clans members and ships only\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>LeftShip</name>
+					<script>reenterCheck()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You exit the ship\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>LandGrabStart</name>
+					<script>startLandGrab()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Possible choices for (.*)\:$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Squadron</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>SquadronLaunched</name>
+					<script>fighterGrab(matches[3])</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(?P&lt;fightertype&gt;.+?) '(?P&lt;fightername&gt;.+?)' launches from a hangar on (?P&lt;hangartype&gt;.+?) '(?P&lt;hangarname&gt;.+?)'\,(.*)$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>SqudronView</name>
+					<script>fighterShow()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(L\[(.*)\]\:P\[(.*)\] )?(?P&lt;fightertype&gt;.+?) '(?P&lt;fightername&gt;.+?)'((\s+[\d-]+\s[\d-]+\s[\d-]+|\s+Prox\: \d+))?$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>LandGrab</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>MatchLine</name>
+					<script>landGrab(matches[1])</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(.*)$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>LandGrabEnd</name>
+					<script>endLandGrab()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>RefuelMessage</name>
+				<script>selectString(line, 1)
+replace( " Tank already full. " )</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^What would be the point of refuelling when your tanks are already full\?$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+		</TriggerGroup>
+	</TriggerPackage>
+	<TimerPackage />
+	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>LotJFlight</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>FlyToArg</name>
+				<script>beginFlight(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^flyto (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>FlyFinish</name>
+				<script>finishFlight(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^flyfinish (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>FlyStatus</name>
+				<script>flightStatus()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^flystatus$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>FlyAuto</name>
+				<script>flyAuto(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^flyauto( +(.*))?$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>FlyClear</name>
+				<script>flyClear()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^flyclear$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>FlyHelp</name>
+				<script>flightHelp()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^flyhelp$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>FighterClear</name>
+				<script>fighterClear()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^fighterclear$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>ExitDir</name>
+				<script>exitDir(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^exitdir (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>EntryDir</name>
+				<script>entryDir(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^entrydir (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>LandingPref</name>
+				<script>landingPref(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^landingpref (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>HatchCode</name>
+				<script>setHatchCode(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^hatchcode (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>ShipName</name>
+				<script>setShipName(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^shipname (.*)$</regex>
+			</Alias>
+		</AliasGroup>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>LotJCalc</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>Calculate</name>
+				<script>showPlanet(matches[3])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^(calc|calculate) (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>CoordCapStart</name>
+				<script>spaceCapStart()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^rad$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>CoordCalc</name>
+				<script>spaceCapCalc(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^lcal (.*)$</regex>
+			</Alias>
+		</AliasGroup>
+	</AliasPackage>
+	<ActionPackage />
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>LotJFlight</name>
+			<packageName></packageName>
+			<script>shipName = ""
+exitdirs = {}
+entrydirs = {}
+hatchCode = 0
+shipEnterDirs = ""
+shipLeaveDirs = ""
+planetName = ""
+lastPlanet = ""
+autoFly = false
+landingSites = {}
+landingSiteNum = 0
+landgrabbing = false
+landPreference = -1
+hangars = {}
+reentership = false
+hypertries = 0
+
+
+function fighterGrab(args)
+  assert(args, "Nil value passed to fighterGrab")
+  local squad = hangars[args.hangarname] or {}
+  squad[#squad + 1] = args.fightertype.." '"..args.fightername.."'"
+  hangars[args.hangarname] = squad
+  --tprint(hangars)
+end
+
+function fighterShow(args)
+  if not args.fightertype or not args.fightername then
+    return
+  end
+  for k, v in ipairs(hangars) do -- scroll through hangars
+    for i, j in ipairs(v) do -- scroll through every saved squad ship
+      if args.fightertype.." '"..args.fightername.."'" == j then
+        DeleteLines(1)
+        for a, b in ipairs(styles) do
+          cecho(RGBColourToName(b.textcolour), RGBColourToName(b.backcolour), b.text) 
+        end 
+        cecho("&lt;yellow&gt;-&gt;&lt;gray&gt;[","&lt;red&gt;" .. k .. "&lt;gray&gt;]")
+      end
+    end
+  end
+end
+
+function fighterClear()
+  hangars = {}
+  print("Squadron information cleared.")
+end
+  
+function reenterCheck()
+  if (reentership == true) then
+    enterShip()
+  end
+end
+
+function setShipName(args)
+    shipName = args
+    cecho("Current ship set to " .. shipName .. "\n")
+    checkSetup()
+end
+
+function setHatchCode(args)
+    hatchCode = tonumber(args)
+    cecho("Hatch code set to " .. hatchCode .. "\n")
+    checkSetup()
+end
+
+function entryDir(args)
+	shipEnterDirs = args
+	cecho("Directions to enter the ship set to " .. shipEnterDirs .. "\n")
+	if string.find(args, " ") then -- entered n n n format
+		entrydirs = string.split(args, " ")
+	elseif string.find(args, ",") then -- entered n,n,n format
+		entrydirs = string.split(args, ",")
+	elseif string.find(args, ";") then -- entered n;n;n format
+		entrydirs = string.split(args, ";")
+  -- room for expansion here to handle speedwalking syntax 2n3eu etc
+	elseif string.lower(args) == "none" then
+		cecho("&lt;lawn_green&gt;One room ship specified.")
+	elseif args == "" then
+		cecho("&lt;tomato&gt;Unrecognized directions given to enter ship, aborting script.\n")
+      toggleFlyOff()
+      return
+   end
+   checkSetup()
+end
+
+function exitDir(args)
+    shipLeaveDirs = args
+    cecho("Directions to leave the ship set to " .. shipLeaveDirs .. "\n")
+  if string.find(args, " ") then -- entered n n n format
+    exitdirs = string.split(args, " ")
+  elseif string.find(args, ",") then -- entered n,n,n format
+    exitdirs = string.split(args, ",")
+  elseif string.find(args, ";") then -- entered n;n;n format
+    exitdirs = string.split(args, ";")
+  -- room for expansion here to handle speedwalking syntax 2n3eu etc
+  elseif string.lower(args) ~= "none" then
+    cecho("&lt;red&gt;Unrecognized directions given to leave ship, aborting script.")
+    toggleFlyOff()
+    return
+  end
+   checkSetup()
+end
+
+function landingPref(args)
+    landPreference = tonumber(args)
+    cecho("Landing preference set to landing pad " .. landPreference .. "\n")
+end
+
+function checkFlightVars()
+    if (shipName == "") then
+        cecho("&lt;tomato&gt;No ship entered. Please designate ship with 'shipname' alias.\n")
+        toggleFlyOff()
+    end
+    if (hatchCode == -1) then
+		cecho("&lt;tomato&gt;No hatch number designated. Please designate hatch number or enter 0 for none with 'hatchcode' alias.\n")
+        toggleFlyOff()
+    end
+    if (shipEnterDirs == "") then
+        cecho("&lt;tomato&gt;No ship entrance path designated. Please designate entrance path with 'entrydir' alias.\n")
+        toggleFlyOff()
+    end
+    if (shipLeaveDirs == "") then
+		cecho("&lt;tomato&gt;No exit directions designated. Please designate exit directions with 'exitdir' alias.\n")
+        toggleFlyOff()
+    end
+end
+
+function checkSetup()
+    if (shipName == "") then
+        cecho("&lt;tomato&gt;No ship entered. Please designate ship with 'shipname' alias.\n")
+    end
+    if (hatchCode == 0) then
+		cecho("&lt;yellow_green&gt;No hatch number designated. Currently set to 0. Please designate hatch number with 'hatchcode' alias if needed.\n")
+    end
+    if (shipEnterDirs == "") then
+        cecho("&lt;tomato&gt;No ship entrance path designated. Please designate entrance path with 'entrydir' alias.\n")
+    end
+    if (shipLeaveDirs == "") then
+		cecho("&lt;tomato&gt;No exit directions designated. Please designate exit directions with 'exitdir' alias.\n")
+    end
+end
+
+function toggleReenter(args)
+  if not args or args == "" then -- entered nothing
+    if reentership then
+      reentership = false
+      cecho("&lt;yellow&gt;Will not re-enter ship upon arrival.\n")
+    else
+      reentership = true
+      cecho("&lt;yellow&gt;Will re-enter ship upon arrival.\n")
+    end
+  elseif string.lower(args) == "on" then
+    reentership = true
+    cecho("&lt;yellow&gt;Will re-enter ship upon arrival.\n")
+  elseif string.lower(args) == "off" then
+    reentership = false
+    cecho("&lt;yellow&gt;Will not re-enter ship upon arrival.\n")
+  end
+end
+
+function flyClear()
+	shipName = ""
+	hatchCode = -1
+	shipEnterDirs = ""
+	shipLeaveDirs = ""
+	planetName = ""
+	lastPlanet = ""
+	autoFly = false
+	landingSites = {}
+	landingSiteNum = 0
+	landgrabbing = false
+	landPreference = -1
+	reentership = false
+	hypertries = 0
+	print("Fly variables cleared.")
+	toggleFlyOff()
+end
+
+function endFlight()
+  checkFlightVars()
+  for i, v in ipairs(exitdirs) do
+    send(v)
+  end
+  send("openhatch")
+  send("leaveship")
+  send("closehatch "..shipName)
+  send("refuel " .. shipName .. " full")
+  send("ships sale")
+  landingSites = {}
+  lastPlanet = planetName
+  if (reentership == true) then
+    enterShip()
+  end
+  toggleFlyOff()
+end
+
+coords = {-50000, 0, 50000}
+
+function waitHyper()
+  hypertries = hypertries + 1
+  if hypertries &gt;= 10 then
+    hypertries = 0
+    send("course "..coords[math.random(3)].." "..coords[math.random(3)].." "..coords[math.random(3)])
+  end
+  tempTimer(10, [[send("hyper")]])
+end
+
+function landing()
+	send("shields on")
+	send("autopilot on")
+end	
+
+function endLandGrab()
+	if (landgrabbing == false) then
+		landgrabbing = true
+		print("Grabbing landing sites...")
+		landingSiteNum = 0
+	else
+		landgrabbing = false
+      disableTrigger("MatchLine")
+      disableTrigger("LandGrabEnd")
+		print("Land grab finished.")
+		landingSiteNum = 0
+		if (tonumber(landPreference) &gt; 0) then
+			landArg(landPreference)
+		else
+			landNext()
+		end
+	end
+end
+
+function landNext()
+	landingSiteNum = landingSiteNum + 1
+	landArg(landingSiteNum)
+end
+
+function landArg(siteNum)
+	if (siteNum &gt; #landingSites) then
+		print("Error in auto landing sequence, aborting...")
+		toggleFlyOff()
+		return
+	end
+	send("land '" .. planetName .. "' " .. landingSites[siteNum])
+end
+
+function landGrab(args)
+   local squelch = string.find(args, "Possible choices for")
+   if (args ~= "" and squelch == nil) then
+   landingSites[#landingSites + 1] = string.trim(args)
+   end
+end
+
+function startLandGrab()
+   landingSites = {}
+	enableTrigger("MatchLine")
+   enableTrigger("LandGrabEnd")
+end
+
+function doLand()
+	send("land '" .. planetName .. "'")
+end
+
+
+function coursePlanet()
+	send("speed 100")
+	send("course '" .. planetName .. "'")
+end
+
+function calcDone()
+  hypertries = 1
+	send("hyper")
+end
+
+function calcPlanet()
+	if (planetName == "") then
+		cecho("&lt;tomato&gt;No planet specified. Please designate planet to fly to.\n")
+        toggleFlyOff()
+	end
+	expandAlias("calc " .. planetName, false)
+end		
+
+function flightStatus()
+	cecho("&lt;gray&gt;Flight status: " .. ((autoFly==true and "&lt;green&gt;Enabled\n") or "&lt;red&gt;Disabled\n"))
+	print("  Flying '" .. shipName .. "' \(Hatch code: " .. hatchCode .. "\)\n")
+	if (autoFly == true) then
+		if (lastPlanet ~= "") then
+			cecho("&lt;yellow_green&gt;  Flying from: " .. lastPlanet)
+		end
+		cecho("&lt;yellow_green&gt;  Destination planet: " .. planetName .. "\n")
+	end
+    cecho("&lt;gray&gt;Entry Path: " .. shipEnterDirs .. "\n")
+    cecho("&lt;gray&gt;Exit Path:  " .. shipLeaveDirs .. "\n")
+    print("")
+	if (reentership == true) then
+	  print("  Will re-enter ship when flight is completed.")
+	end
+end
+
+function finishFlight(args)
+	if (args ~= "") then
+		planetName = string.trim(args)
+		print("Planet name: '" .. planetName .. "'")
+	end
+	toggleFlyOn()
+	if (shipName == "") then
+		cecho("&lt;tomato&gt;No ship entered. Please designate ship with 'shipname' alias.\n")
+	end
+	if (shipLeaveDirs == "") then
+		cecho("&lt;tomato&gt;No exit directions designated. Please designate exit directions with 'exitdir' alias.\n")
+	end
+	if (landPreference == -1) then
+		cecho("&lt;tomato&gt;No landing preference designated. Please designate landing preference with 'landingpref' alias.\n")
+	end
+end
+
+function beginFlight(args)
+    checkFlightVars()
+	if (args ~= "") then
+		planetName = string.trim(args)
+	else
+		cecho("&lt;tomato&gt;Please designate planet to fly to.\n")
+	end
+    send("refuel " .. shipName .. " full")
+	enterShip()
+	toCockpit()
+	send("pilot")
+	send("autopilot off")
+	send("launch confirm")
+	send("shields on")
+	print("Flying to: '" .. planetName .. "'")
+	toggleFlyOn()
+end
+
+function enterShip()
+	if (hatchCode &lt; 1) then
+		send("openhatch " .. shipName)
+	else
+		send("openhatch " .. shipName .. " " .. hatchCode)
+	end
+	send("enter " .. shipName)
+	send("closehatch")
+end
+
+function toCockpit(name, list, args)
+   for i, v in ipairs(entrydirs) do
+      send(v)
+   end
+end
+
+function toggleFlyOn()
+	autoFly = true
+	enableTrigger("Flight")
+	cecho("&lt;green&gt;Auto Flight activated.\n")
+end
+
+function toggleFlyOff()
+	autoFly = false
+	disableTrigger("Flight")
+	cecho("&lt;yellow&gt;Auto Flight deactivated.\n")
+end
+
+function flyAuto(args)
+   if (args == "on") then
+      toggleFlyOn()
+   else
+      if (args == "off") then
+         toggleFlyOff()
+      else
+         if(autoFly == true) then
+            toggleFlyOff()
+         else
+            toggleFlyOn()
+         end
+      end
+   end
+end
+
+function flightHelp()
+    cecho("&lt;yellow_green&gt;Automatic flight commands:\n")
+    cecho("&lt;yellow_green&gt;------------------------------\n")
+    cecho("&lt;yellow_green&gt;flyto &lt;planet&gt;      - Begin a flight to given planet, while standing in front of ship\n")
+    --print("Flyto prompt        - Begin a new flight, prompting for parameters")
+    cecho("&lt;yellow_green&gt;flyfinish &lt;planet&gt;  - Finish a flight already in progress to given planet\n")
+    cecho("&lt;yellow_green&gt;flystatus           - Display current status of flight\n")
+    cecho("&lt;yellow_green&gt;flyauto on/off      - Enable or disable automatic flight\n")
+    cecho("&lt;yellow_green&gt;flyclear            - Clears all current fly variables\n")
+    cecho("&lt;yellow_green&gt;flyreenter          - Re-enter your ship at the end of a flight\n")
+    cecho("&lt;yellow_green&gt;hatchcode &lt;#&gt;       - Designates the hatch number. 0 for none\n")
+    cecho("&lt;yellow_green&gt;entrydir &lt;path&gt;     - Designates the entry path. Can accept 'n n n', 'n,n,n' or 'n;n;n'\n")
+    cecho("&lt;yellow_green&gt;exitdir &lt;path&gt;      - Designates the exit path. Can accept 'n n n', 'n,n,n' or 'n;n;n'\n")
+    cecho("&lt;yellow_green&gt;landingpref &lt;#&gt;     - Designates the landing preference (top down, 0 for auto.)\n")
+    cecho("&lt;yellow_green&gt;shipname &lt;shipname&gt; - Designates the ship's name\n")
+    cecho("&lt;yellow_green&gt;flyHelp             - Display this help menu\n")
+    cecho("\n")
+end
+
+</script>
+			<eventHandlerList />
+		</Script>
+		<Script isActive="yes" isFolder="no">
+			<name>LotJCalc</name>
+			<packageName></packageName>
+			<script>planets = {}
+planetname = ""
+systemname = ""
+coordX = 0
+coordY = 0
+coordZ = 0
+
+spaceCoords = {}
+
+function spaceCapStart()
+	enableTrigger(SpaceCap)
+	spaceCoords = {}
+	send("radar")
+end
+function spaceCapStop()
+	disableTrigger(SpaceCap)
+end
+
+function spaceCapStore(name, line, args, styles)
+	local body = {
+		name=string.trim(name),
+		x=tonumber(line),
+		y=tonumber(args),
+		z=tonumber(styles)
+	}
+	if (body.name ~= "Your Coordinates:" and body.name ~= "New course set, approaching" and not string.findPattern(body.name, "Speed:", 0, true)) then
+		spaceCoords[#spaceCoords + 1] = body
+		cecho("&lt;silver&gt;", #spaceCoords..") ")
+		for k, v in ipairs(body) do
+      Hyperlink("lcalc "..#spaceCoords, v.text, "Jump to "..spaceCoords[#spaceCoords].name, RGBColourToName(v.textcolour), RGBColourToName(v.backcolour), false)
+    end
+  else
+    for k, v in ipairs(body) do
+      cecho(RGBColourToName(v.textcolour), RGBColourToName(v.backcolour), v.text) 
+    end   
+  end
+  print("")
+end
+
+
+function spaceCapCalc(args)
+	for i, v in ipairs(spaceCoords) do
+		if ((tonumber(args) == i) or string.findPattern(string.lower(v.name), string.lower(args), 0, true)) then
+  		cecho("&lt;green&gt;Entering coordinates for "..v.name)
+	  	send("calc local "..v.x.." "..v.y.." "..v.z+500)
+	  	return
+		end
+	end
+	cecho("&lt;red&gt;Invalid argument given to lcalc: ".. args .. "\n")
+end
+
+function showPlanet(args)
+  if not args == "" then -- we entered "calc" with no args, so pass it through
+    send("calculate\n")
+    return
+  end
+  if args == "stop" then -- entered "calc stop", pass it through
+    planetname = ""
+    send("calculate stop\n")
+    return
+  end
+  if string.findPattern(args, "local", 0, true) then -- we entered calc local x y z, pass it through
+    planetname = "local"
+    send("calculate "..args .. "\n")
+    return
+  end
+  if string.findPattern(args, "%'[%d-]* [%d-]*%'", 0, false) then -- we entered an uncharted sector in 'x y' x y z format
+    -- set our planetname to the x y coordinates
+    local xstart, xend = string.findPattern(args, "%'[%d-]+", 0, false)
+    local xcoord = string.sub(args, xstart+1, xend)
+    local ystart, yend = string.findPattern(args, "[%d-]+%'", xend, false)
+    local ycoord = string.sub(args, ystart, yend-1)
+    --cecho("xstart: "..xstart.." xend: "..xend.." xcoord: "..xcoord)
+    --cecho("ystart: "..ystart.." yend: "..yend.." ycoord: "..ycoord)
+
+    --planetname = (..xcoord.., " ", ..ycoord..)
+    --cecho(GetVariable("planetname"))
+    send("calculate "..args)
+    return
+  end
+  -- add option to enter calc x y x y z for uncharted sectors here
+    if (args ~= nil and args ~= "stop") then -- we entered a standard planetname
+        planetname = string.trim(args)
+        enableTrigger("ShowplanetSuccess")    
+        enableTrigger("ShowplanetFailure")
+        send("showplanet '" .. planetname .. "'\n", false)
+    else
+		print("Invalid planet name!\n")
+	end
+end
+
+function showplanetSuccess()
+    enableTrigger("SystemCap")
+    enableTrigger("PlanetCap")
+    enableTrigger("CoordCap")
+    enableTrigger("CalcEnd")
+    enableTrigger("GagAll")
+end
+
+function showplanetFailure()
+	toggleFlightOff()
+	disableTrigger("GagAll")
+	cecho("&lt;red&gt;Planet lookup failed.\n")
+end
+
+function planetCheck(args)
+	if (args ~= nil) then
+		if (string.lower(planetname) == string.lower(args)) then
+			return true
+		end
+	end
+	cecho("red", "", "Invalid planet found.\n")
+    toggleFlightOff()
+	disableTrigger("GagAll")
+	return false
+end
+
+function calculate()
+	local newX = coordX + 500
+	toggleFlightOff()
+	disableTrigger("GagAll")
+	cecho("&lt;green&gt;System found: " .. systemname .. "\n")
+   cecho("&lt;green&gt;Coordinates found: " .. coordX .. ", " .. coordY .. ", " .. coordZ .. "\n")
+	send("calculate \"" .. systemname .. "\" " .. newX .. " " .. coordY .. " " .. coordZ, false)
+end
+
+function toggleFlightOff()
+   disableTrigger("SystemCap")
+   disableTrigger("PlanetCap")
+   disableTrigger("CoordCap")
+   disableTrigger("CalcEnd")
+   disableTrigger("ShowplanetSuccess")
+   disableTrigger("ShowplanetFailure")
+end
+
+function setSystem(args)
+	if (args ~= nil) then
+		systemname = args
+	else
+        disableTrigger("GagAll")
+		cecho("&lt;red&gt;\nInvalid system name!\n")
+	end
+
+end
+
+function clearPlanet()
+  planetname = ""
+end
+
+function setCoords(name, list, args)
+	if ((name ~= nil) and (list ~= nil) and (args ~= nil)) then
+		coordX = name
+		coordY = list
+		coordZ = args
+	else
+        disableTrigger("GagAll")
+		cecho("&lt;red&gt;Invalid number of coordinate arguments!\n")
+	end
+end</script>
+			<eventHandlerList />
+		</Script>
+	</ScriptPackage>
+	<KeyPackage />
+	<VariablePackage>
+		<HiddenVariables />
+		<VariableGroup>
+			<name>bestResult</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+			<Variable>
+				<name>about</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+			<Variable>
+				<name>head</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+		</VariableGroup>
+		<VariableGroup>
+			<name>comlinkList</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+		</VariableGroup>
+		<Variable>
+			<name>autoTransition</name>
+			<keyType>4</keyType>
+			<value>false</value>
+			<valueType>1</valueType>
+		</Variable>
+	</VariablePackage>
+</MudletPackage>

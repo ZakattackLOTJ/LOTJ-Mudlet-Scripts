@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage />
+	<TimerPackage />
+	<AliasPackage />
+	<ActionPackage />
+	<ScriptPackage />
+	<KeyPackage>
+		<KeyGroup isActive="yes" isFolder="yes">
+			<name>Scans</name>
+			<packageName></packageName>
+			<script></script>
+			<command></command>
+			<keyCode>-1</keyCode>
+			<keyModifier>0</keyModifier>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanWest</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan west</command>
+				<keyCode>52</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanEast</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan east</command>
+				<keyCode>54</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanNorth</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan north</command>
+				<keyCode>56</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>Scan South</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan south</command>
+				<keyCode>50</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanSE</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan se</command>
+				<keyCode>51</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanSW</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan sw</command>
+				<keyCode>49</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanNW</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan nw</command>
+				<keyCode>55</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanNE</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan ne</command>
+				<keyCode>57</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanUp</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan up</command>
+				<keyCode>45</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>ScanDown</name>
+				<packageName></packageName>
+				<script></script>
+				<command>scan down</command>
+				<keyCode>43</keyCode>
+				<keyModifier>603979776</keyModifier>
+			</Key>
+		</KeyGroup>
+		<KeyGroup isActive="yes" isFolder="yes">
+			<name>Direction Keys</name>
+			<packageName></packageName>
+			<script></script>
+			<command></command>
+			<keyCode>-1</keyCode>
+			<keyModifier>0</keyModifier>
+			<Key isActive="yes" isFolder="no">
+				<name>South</name>
+				<packageName></packageName>
+				<script></script>
+				<command>south</command>
+				<keyCode>50</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>Southeast</name>
+				<packageName></packageName>
+				<script></script>
+				<command>se</command>
+				<keyCode>51</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>Southwest</name>
+				<packageName></packageName>
+				<script></script>
+				<command>sw</command>
+				<keyCode>49</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>East</name>
+				<packageName></packageName>
+				<script></script>
+				<command>east</command>
+				<keyCode>54</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>West</name>
+				<packageName></packageName>
+				<script></script>
+				<command>west</command>
+				<keyCode>52</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>North</name>
+				<packageName></packageName>
+				<script></script>
+				<command>north</command>
+				<keyCode>56</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>Northwest</name>
+				<packageName></packageName>
+				<script></script>
+				<command>nw</command>
+				<keyCode>55</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>Northeast</name>
+				<packageName></packageName>
+				<script></script>
+				<command>ne</command>
+				<keyCode>57</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>Down</name>
+				<packageName></packageName>
+				<script></script>
+				<command>down</command>
+				<keyCode>43</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>Up</name>
+				<packageName></packageName>
+				<script></script>
+				<command>up</command>
+				<keyCode>45</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+			<Key isActive="yes" isFolder="no">
+				<name>Look</name>
+				<packageName></packageName>
+				<script></script>
+				<command>look</command>
+				<keyCode>48</keyCode>
+				<keyModifier>536870912</keyModifier>
+			</Key>
+		</KeyGroup>
+		<Key isActive="yes" isFolder="no">
+			<name>AFK</name>
+			<packageName></packageName>
+			<script></script>
+			<command>afk</command>
+			<keyCode>53</keyCode>
+			<keyModifier>536870912</keyModifier>
+		</Key>
+	</KeyPackage>
+	<VariablePackage>
+		<HiddenVariables />
+		<VariableGroup>
+			<name>bestResult</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+			<Variable>
+				<name>about</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+			<Variable>
+				<name>head</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+		</VariableGroup>
+		<VariableGroup>
+			<name>comlinkList</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+		</VariableGroup>
+		<Variable>
+			<name>autoTransition</name>
+			<keyType>4</keyType>
+			<value>false</value>
+			<valueType>1</valueType>
+		</Variable>
+	</VariablePackage>
+</MudletPackage>

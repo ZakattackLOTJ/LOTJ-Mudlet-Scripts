@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<TriggerGroup isActive="no" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>LotJArmor</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<TriggerGroup isActive="no" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>AutoArmor</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>stitchComplete</name>
+					<script>makeArmor()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You finish working on (.*)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>armorComplete</name>
+					<script>makeNextArmor()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You hold up your finished piece of (.*) armor\!$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ArmorBotting</name>
+					<script>resumeArmorFromAFK()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You may now bot again.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ArmorOnConnect</name>
+					<script>makeArmor()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Show what to whom\?$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="no" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>AutoEnhance</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>enhanceFailed</name>
+					<script>enhanceArmor()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You hold up the enhanced armor only to find that you failed\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>enhanceComplete</name>
+					<script>enhanceNext()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You finish adding your (.*) to the armor\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>enhanceAlreadyDone</name>
+					<script>enhanceNext()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^This armor already has (.*)\!$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>enhanceBadItem</name>
+					<script>enhanceBadItem()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Thats not a piece of armor\!$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>enhanceBadOverlay</name>
+					<script>enhanceBadItem()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Thats not the right kind of item\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>EnhanceBotting</name>
+					<script>resumeEnhanceFromAFK()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You may now bot again.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>EnhanceOnConnect</name>
+					<script>enhanceArmor()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Show what to whom\?$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Enhancemissingitem</name>
+					<script>enhanceBadItem()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You don\'t have an item like that\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="no" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>NewArmor</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>NewArmorMade</name>
+					<script>NANext()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You create your new piece of (.*) armor\: (.*)$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+		</TriggerGroup>
+	</TriggerPackage>
+	<TimerPackage />
+	<AliasPackage>
+		<AliasGroup isActive="no" isFolder="yes">
+			<name>LotJArmor</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>AutoArmorCmd</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>ArmorAdd</name>
+					<script>addArmor(matches[3])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(armoradd|aadd) (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ArmorRem</name>
+					<script>removeArmor(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armorrem (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ArmorClear</name>
+					<script>clearArmorList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armorclear$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ArmorAuto</name>
+					<script>armorAuto(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armorAuto( +(.*))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ArmorList</name>
+					<script>displayArmorList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armorlist$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ArmorStart</name>
+					<script>armorStart()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armorstart$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>MakeArmor</name>
+					<script>makeArmor(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^makearmor( +(.*))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>makeNextArmor</name>
+					<script>makeNextArmor()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armornext$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>DisplayArmorHelp</name>
+					<script>displayArmorHelp()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armorhelp$</regex>
+				</Alias>
+				<Alias isActive="no" isFolder="no">
+					<name>BactaCheck</name>
+					<script>switchBacta(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^bactaCheck( +(.*))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ClearAll</name>
+					<script>clearAllList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armorclearall$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>DisplayAllHelp</name>
+					<script>displayAllHelp()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^armorhelpall$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>EnhanceArmorCmd</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>EnhanceAdd</name>
+					<script>addEnhanceItem(matches[3], matches[4])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^(enhanceadd|eadd) (.*) (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>EnhanceClear</name>
+					<script>clearEnhanceList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^enhanceclear$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>EnhanceAuto</name>
+					<script>enhanceAuto(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^enhanceauto( +(.*))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>EnhanceList</name>
+					<script>displayEnhanceList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^enhancelist$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>EnhanceStart</name>
+					<script>enhanceStart()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^enhancestart$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>EnhanceArmor</name>
+					<script>enhanceArmor()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^enhance$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>EnhanceNextArmor</name>
+					<script>enhanceNext()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^enhancenext$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>TransitionAuto</name>
+					<script>transitionAuto(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^transitionauto( +(.*))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>DisplayEnhanceHelp</name>
+					<script>displayEnhanceHelp()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^enhancehelp$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>NewArmorCmd</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>NewArmorAdd</name>
+					<script>newArmorAddM(matches[2], matches[3], matches[4], matches[5], matches[6], matches[7], matches[8], matches[9], matches[10], matches[11], matches[12])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^newarmoradd (.*) (.*) (.*) \'(.*)\' \'(.*)?\' (.*) (.*) (.*) (.*) (.*) (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>NewArmorStart</name>
+					<script>NAStart()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^newarmorstart$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>NewArmorList</name>
+					<script>displayNAList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^newarmorlist$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>NewArmorClear</name>
+					<script>clearNAList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^newarmorclear$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>DisplayNAHelp</name>
+					<script>displayNAHelp()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^newarmorhelp$</regex>
+				</Alias>
+			</AliasGroup>
+		</AliasGroup>
+	</AliasPackage>
+	<ActionPackage />
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>LotJArmor</name>
+			<packageName></packageName>
+			<script>armorList = {}
+currentPos = 1
+autoArmor = false
+enhanceList = {}
+autoEnhance = false
+currentEnh = 1
+autoTransition = false
+newArmorAuto = false
+afk = false
+NAList = {}
+currentNA = 1
+newarmor = {
+	material = "",
+	wearloc = "",
+	cover = "",
+	desc = "",
+	restring = "",
+	underlay = "",
+	coating = "",
+	keyword = "",
+	work = "",
+	enhance = ""
+	}
+bactaCheck = false
+previousBacta = 0
+
+function makeArmor()
+	if (armorList[currentPos]) then
+		send("makearmor ".. armorList[currentPos])
+	else
+		cecho("&lt;tomato&gt;Armor list empty, aborting!\n")
+		toggleArmorOff()
+	end
+end
+
+function armorStart()
+	if (#armorList &gt; 0) then -- we have stuff to make!
+		currentPos = 0
+		makeNextArmor()
+		toggleArmorOn()
+	else                     -- nothing to make
+		cecho("&lt;tomato&gt;Nothing to make!\n")
+		toggleArmorOff()
+	end
+end
+
+function toggleArmorOn()
+	autoArmor = true
+	enableTrigger("AutoArmor")
+	enableTrigger("AutoAFK")
+	cecho("&lt;slate_grey&gt;AutoArmor activated.\n")
+end
+
+function toggleArmorOff()
+	autoArmor = false
+	disableTrigger("AutoArmor")
+	disableTrigger("AutoAFK")
+	cecho("AutoArmor deactivated.\n")
+end
+
+function afkOn()
+	afk = true
+end
+
+function afkOff()
+	afk = false
+end
+
+function makeNextArmor()
+	currentPos = currentPos + 1
+	if (currentPos &gt; #armorList) then  -- reached end of list
+		cecho("\n&lt;lawn_green&gt;Armormaking complete.\n")      -- finished
+		toggleArmorOff()
+	else                                    -- middle of list
+		makeArmor()  -- finally, make armor
+	end
+end
+
+function addArmor(args)
+	if not args then
+		cecho("&lt;tomato&gt;Invalid arguments given to armoradd. Use format 'armoradd &lt;armor&gt;'.\n")
+		return
+	end
+	armorList[#armorList + 1] = args
+	cecho("&lt;lawn_green&gt;'" .. armorList[#armorList] .. "' added to armor list.\n")
+end
+
+function removeArmor(args)
+   for i, v in ipairs(armorList) do
+      if ((v == args) or (i == tonumber(args))) then
+         cecho("&lt;lawn_green&gt;Removed '" .. armorList[i] .. "' index(" .. i .. ") from armor list.\n")
+         table.remove(armorList, i)
+         if (currentPos &gt; i) then  -- if our item is higher in the list than what we remove
+         	currentPos = currentPos - 1  -- decrement the pointer to follow the current item
+         end
+         break
+      else
+         if (#armorList == i) then
+            cecho("&lt;tomato&gt;Unable to find specified item in armor list.\n")
+         end
+      end
+   end
+end
+
+function clearArmorList()
+	armorList = {}
+	cecho("&lt;lawn_green&gt;Armor list cleared.\n")
+	currentPos = 0
+	toggleArmorOff()
+end
+
+function clearAllList()
+	clearArmorList()
+	clearEnhanceList()
+	clearNAList()
+end
+
+function resumeArmorFromAFK()
+	if (afk) then
+		Send("afk")
+	end
+	send("bot start")
+	makeArmor()
+end
+
+function displayArmorList(name, line, args)
+    cecho("&lt;grey&gt;Armor List Contains: \n")
+    for i, v in ipairs(armorList) do
+      if (i == currentPos) then
+        cecho("&lt;green&gt;--]&gt;"..v.."&lt;[--\n")
+      else
+        cecho("&lt;grey&gt;" .. v .. "\n")
+      end
+    end
+end
+
+function armorAuto(args)
+   if (args == "on") then
+      toggleArmorOn()
+   else
+      if (args == "off") then
+         toggleArmorOff()
+      else
+         if(autoArmor == true) then
+            toggleArmorOff()
+         else
+            toggleArmorOn()
+         end
+      end
+   end
+end
+
+function displayAllHelp()
+	displayArmorHelp()
+	displayEnhanceHelp()
+	displayNAHelp()
+end
+
+function displayArmorHelp()
+   cecho("&lt;grey&gt;Armor Stitching Commands:\n")
+   cecho("&lt;grey&gt;------------------------------\n")
+   cecho("&lt;grey&gt;Makearmor           - Resume stitching current item in the list\n")
+   cecho("&lt;grey&gt;ArmorStart          - Begin automatic stitching session from front of list\n")
+   cecho("&lt;grey&gt;ArmorAdd &lt;item&gt;     - Add an item to the automatic stitching list\n")
+   cecho("&lt;grey&gt;ArmorRem &lt;item/#&gt;   - Remove an item from stitching list by name or index number\n")
+   cecho("&lt;grey&gt;ArmorList           - Display stitching list contents\n")
+   cecho("&lt;grey&gt;ArmorNext           - Skip current item in stitching list\n")
+   cecho("&lt;grey&gt;ArmorAuto (on/off)  - Turns automatic stitching on or off\n")
+   cecho("&lt;grey&gt;BactaCheck (on/off) - Helps display the amount of bacta contained in armor\n")
+   cecho("&lt;grey&gt;ArmorClearAll       - Clear all armor related lists and deactivate all armor scripts\n")
+   cecho("&lt;grey&gt;ArmorHelp           - Display this command list\n")
+   cecho("&lt;grey&gt;ArmorHelpAll        - Display all armor related command lists\n")
+   cecho("&lt;grey&gt;\n")
+end -- function
+
+function enhanceArmor()
+	if (enhanceList[currentEnh][1]) then
+		send("enhancearmor " .. enhanceList[currentEnh][1] .. " " .. enhanceList[currentEnh][2])
+	else
+		cecho("&lt;tomato&gt;Enhance list empty, aborting!\n")
+		toggleEnhanceOff()
+	end
+end
+
+function enhanceStart()
+	if (#enhanceList &gt; 0) then  -- we have stuff to enhance
+		currentEnh = 0
+		enhanceNext()
+		toggleEnhanceOn()
+	else
+		cecho("&lt;tomato&gt;Nothing to enhance!\n")
+		toggleEnhanceOff()
+	end
+end
+
+function enhanceBadItem()
+	if (autoArmor) then -- if automatic stitching is activated, remove this item from the stitching list
+						-- because we ran into an error with the enhancement and don't want to stitch an
+						-- unenhanced piece of gear
+		expandAlias("armorrem " .. currentPos)
+	end
+	enhanceNext() -- move on to next piece to enhance
+end
+function toggleEnhanceOn(name, line, args)
+	autoEnhance = true
+	enableTrigger("AutoEnhance")
+	enableTrigger("AutoAFK")
+	cecho("&lt;lawn_green&gt;AutoEnhance activated.\n")
+end
+
+function toggleEnhanceOff(name, list, args)
+	autoEnhance = false
+	disableTrigger("AutoEnhance")
+	disableTrigger("AutoAFK")
+	cecho("&lt;tomato&gt;AutoEnhance deactivated.\n")
+end
+
+function enhanceNext(name, list, args)
+	currentEnh = currentEnh + 1
+	if (currentEnh &gt; #enhanceList) then -- reached end of list
+		cecho("\n&lt;lawn_green&gt;AutoEnhance complete.\n")   -- finished
+		toggleEnhanceOff()
+		if (autoTransition == true) then -- if we're automatically switching to makearmor when done
+			armorStart()
+		end
+	else
+		enhanceArmor()  -- enhance the armor if we aren't done
+	end
+end
+
+function addEnhanceItem(item, enhancement)
+	if (item == nil or enhancement == nil) then
+		cecho("&lt;tomato&gt;Invalid arguments given to enhanceadd. Use format 'enhanceadd &lt;armor&gt; &lt;underlay&gt;'.\n")
+		return
+	end
+	t = #enhanceList -- Find the size of the list
+	temp = {}
+	table.insert(temp, 1, item)
+	table.insert(temp, enhancement)
+	if (t == 0) then
+		table.insert(enhanceList, 1, temp) -- Make first entry
+	else
+		table.insert(enhanceList, temp) -- Make subsequent entries
+	end
+	cecho("&lt;lawn_green&gt;'" .. enhanceList[#enhanceList][1] .. ":" .. enhanceList[#enhanceList][2] .. "' added to enhance list.\n")
+end
+
+function clearEnhanceList()
+	enhanceList = {}
+	cecho("&lt;lawn_green&gt;Enhance list cleared.\n")
+	currentPos = 0
+	toggleTransitionOff()
+	toggleEnhanceOff()
+end
+
+function resumeEnhanceFromAFK(name, line, args)
+	if (afk) then
+		Send("afk")
+	end
+	Send("bot start")
+	enhanceArmor()
+end
+
+function displayEnhanceList(name, line, args)
+   cecho("&lt;grey&gt;Enhance List Contains: \n")
+   for i, v in ipairs(enhanceList) do
+    if (i == currentEnh) then
+      cecho("&lt;green&gt;--]&gt;"..v[1]..":"..v[2].."&lt;[--\n")
+    else
+      cecho("&lt;grey&gt;--]&gt;"..v[1]..":"..v[2].."&lt;[--\n")
+    end
+   end
+end
+
+function enhanceAuto(args)
+   if (args == "on") then
+      toggleEnhanceOn()
+   else
+      if (args == "off") then
+         toggleEnhanceOff()
+      else
+         if(autoEnhance == true) then
+            toggleEnhanceOff()
+         else
+            toggleEnhanceOn()
+         end
+      end
+   end
+end
+
+function displayEnhanceHelp()
+   cecho("&lt;grey&gt;Armor Enhancing Commands:")
+   cecho("&lt;grey&gt;------------------------------")
+   cecho("&lt;grey&gt;Enhance                       - Resume enhancing current item in enhance list")
+   cecho("&lt;grey&gt;EnhanceStart                  - Begin new enhancing session from front of list")
+   cecho("&lt;grey&gt;EnhanceAdd &lt;armor&gt; &lt;underlay&gt; - Manually add an item to the enhance list")
+   cecho("&lt;grey&gt;EnhanceList                   - Display enhance list contents")
+   cecho("&lt;grey&gt;EnhanceClear                  - Clear current Enhance list")
+   cecho("&lt;grey&gt;EnhanceNext                   - Skip current item in enhance list")
+   cecho("&lt;grey&gt;EnhanceAuto (on/off)          - Turns automatic enhancing on or off")
+   cecho("&lt;grey&gt;TransitionAuto (on/off)       - Automatically begins stitching when enhance list is finished")
+   cecho("&lt;grey&gt;EnhanceHelp                   - Display this command list")
+   cecho("&lt;grey&gt;\n")
+end -- function
+
+function toggleTransitionOff()
+	autoTransition = false
+	cecho("&lt;slate_grey&gt;AutoTransition deactivated.\n")
+end
+
+function toggleTransitionOn(name, line, args)
+	autoTransition = true
+	cecho("&lt;lawn_green&gt;AutoTransition activated.\n")
+end
+
+function transitionAuto(args)
+   if (args == "on") then
+      toggleTransitionOn()
+   else
+      if (args == "off") then
+         toggleTransitionOff()
+      else
+         if(autoTransition == true) then
+            toggleTransitionOff()
+         else
+            toggleTransitionOn()
+         end
+      end
+   end
+end
+
+function newArmorAddM(mat, wearloc, cover, desc, restring, underlay, coating, keyword, enhance, work, number)
+	--material wearloc cover 'desc' 'restring' underlay coating keyword enhance stitch number
+	--davor about cover 'a black suit of armor' none bacta ablative armor yes yes 1
+	newarmor.material = mat
+	newarmor.wearloc  = wearloc
+	newarmor.cover    = cover
+	newarmor.desc     = desc
+	newarmor.restring = restring
+	newarmor.underlay = underlay
+	newarmor.coating  = coating
+	newarmor.keyword  = keyword
+	newarmor.enhance  = enhance
+	newarmor.work     = work
+	local keyword = keyword
+	for i=1, tonumber(number), 1 do
+		newarmor.keyword = i .. "." .. keyword
+		if ((newarmor.underlay ~= "") and (newarmor.enhance == "yes")) then
+			expandAlias("eadd " .. newarmor.keyword .. " " .. newarmor.underlay)
+		end
+		if ((newarmor.coating ~= "") and (newarmor.enhance == "yes")) then
+			expandAlias("eadd " .. newarmor.keyword .. " " .. newarmor.coating)
+		end
+		if (newarmor.work == "yes") then
+			expandAlias("aadd " .. newarmor.keyword)
+		end
+		addNAItem(newarmor)  -- add item to the queue
+	end
+	
+	newarmor = {
+		material = "",
+		wearloc = "",
+		cover = "",
+		desc = "",
+		restring = "",
+		underlay = "",
+		coating = "",
+		keyword = "",
+		work = "",
+		enhance = ""
+		}
+end
+	
+--This is the old 'newarmor' from MUSHClient. Mudlet does not have an input box like mudlet does, so I'm commenting this out just in case.
+--function newArmorAdd(name, line, args)
+--	newarmor.material = utils.inputbox("Material to be used?", "Material", "rethin", "Courier", 9)
+--	newarmor.wearloc =  utils.inputbox("Wear location for new piece?", "Wear Location", "about", "Courier", 9)
+--	newarmor.cover =    utils.inputbox("Cover or nocover?", "Cover/Nocover", "cover", "Courier", 9)
+--	newarmor.desc =     utils.inputbox("Desc for new armor?", "Description", "Description", "Courier", 9)
+--	newarmor.restring = utils.inputbox("Restring for armor? (leave blank for none)", "Restring", "Restring", "Courier", 9)
+-- newarmor.underlay = utils.inputbox("Underlay for armor?", "Underlay", "bacta", "Courier", 9)
+--	newarmor.coating  = utils.inputbox("Coating for armor?", "Coating", "ablative", "Courier", 9)
+--	newarmor.keyword  = utils.inputbox("Keyword for armor?", "Keyword", "armor", "Courier", 9)
+--	newarmor.enhance  = utils.inputbox("Autoenhancing?", "Enhance?", "yes", "Courier", 9)
+--	newarmor.work     = utils.inputbox("Autostitching?", "Stitch?", "yes", "Courier", 9)
+--	if ((newarmor.underlay ~= "") and (newarmor.enhance == "yes")) then
+--		Execute("eadd " .. newarmor.keyword .. " " .. newarmor.underlay)
+--	end
+--	if ((newarmor.coating ~= "") and (newarmor.enhance == "yes")) then
+--		Execute("eadd " .. newarmor.keyword .. " " .. newarmor.coating)
+--	end
+--	if (newarmor.work == "yes") then
+--		Execute("aadd " .. newarmor.keyword)
+--	end
+--	addNAItem(newarmor)  -- add item to the queue
+--	
+--	newarmor = {
+--	material = "",
+--	wearloc = "",
+--	cover = "",
+--	desc = "",
+--	restring = "",
+--	underlay = "",
+--	coating = "",
+--	keyword = "",
+--	work = "",
+--	enhance = ""
+--	}
+--end
+
+function NANext()
+	currentNA = currentNA + 1
+	if (currentNA &gt; #NAList) then  -- reached end of list
+		cecho("&lt;green&gt;New Armor Making complete.\n")      -- finished
+		toggleNAOff()
+		enhanceStart() -- start enhancing armors
+	else                                    -- middle of list
+		newArmor()  -- finally, make armor
+	end
+end
+
+function NAStart()
+	if (#NAList &gt; 0) then -- we have new armors to make
+		currentNA = 0
+		toggleTransitionOn()
+		toggleNAOn()
+		NANext()
+	else
+		cecho("&lt;tomato&gt;No new armors to make!\n")
+		toggleNAOff()
+	end
+   disableTrigger("LotJBulkArmor")
+end
+
+function newArmor()
+	if (NAList[currentNA]) then
+		send("makearmor " .. NAList[currentNA].material .. " " .. NAList[currentNA].wearloc .. " " .. NAList[currentNA].cover .. " " .. NAList[currentNA].desc)
+	else
+		cecho("&lt;tomato&gt;New Armor Making list empty, aborting!\n")
+		toggleNAOff()
+	end
+end
+
+function addNAItem(item)
+	t = #NAList -- Find the size of the list
+	if (t == 0) then
+		table.insert(NAList, 1, item) -- Make first entry
+	else
+		table.insert(NAList, item) -- Make subsequent entries
+	end
+	cecho("Added keyword '" .. item.keyword .. "' to New Armor List.\n")
+end
+
+function displayNAList()
+	cecho("&lt;slate_gray&gt;New Armor List Contains: \n")
+	for k, v in ipairs(NAList) do
+		cecho(v.keyword .. ":")
+		for ke, va in ipairs(v) do
+ 			cecho("&lt;slate_grey&gt;  " .. tostring(ke) .. ":" .. tostring(va))
+	    end     
+   end
+end
+
+function clearNAList()
+	NAList = {}
+	newarmor = {
+	material = "",
+	wearloc = "",
+	cover = "",
+	desc = "",
+	restring = "",
+	underlay = "",
+	coating = "",
+	keyword = "",
+	work = "",
+	enhance = ""
+	}
+	cecho("&lt;lawn_green&gt;New Armor list cleared.\n")
+	currentNA = 0
+	toggleNAOff()
+end
+
+function toggleNAOn()
+	newArmorAuto = true
+	enableTrigger("NewArmor")
+	cecho("&lt;lawn_green&gt;New Armor Making Activated.\n")
+end
+
+function toggleNAOff()
+	newArmorAuto = false
+	disableTrigger("NewArmor")
+	cecho("&lt;tomato&gt;New Armor Making Deactivated.\n")
+end
+
+function displayNAHelp(name, line, args)
+   cecho("&lt;grey&gt;New Armor Commands:\n")
+   cecho("&lt;grey&gt;------------------------------\n")
+   cecho("&lt;grey&gt;NewArmorAdd   - Add a new piece of armor to be crafted into the queue. Add armor to the list in the format:\n")
+   cecho("&lt;grey&gt;                naaddm material wearloc cover 'desc' 'restring' underlay coating keyword enhance stitch number\n")
+   cecho("&lt;grey&gt;NewArmorStart - Begin crafting new armors from start of queue, automatically moving on to enhancing and stitching\n")
+   cecho("&lt;grey&gt;NewArmorList  - Display contents of armors to be crafted\n")
+   cecho("&lt;grey&gt;NewArmorClear - Clear current list of new armors to be crafted\n")
+   cecho("&lt;grey&gt;NewArmorHelp  - Show this command list\n")
+   cecho("&lt;grey&gt;\n")
+end -- function
+
+function bactaNew(args)
+	if (math.abs(previousBacta - tonumber(args)) &gt; 0) then
+		cecho("&lt;cyan&gt;" .. math.abs(previousBacta - tonumber(args)))
+	end
+	previousBacta = tonumber(args)
+end
+
+function toggleBactaOn(name, line, args)
+	bactaCheck = true
+	enableTrigger("BactaCheck")
+	cecho("&lt;cyan&gt;BactaCheck activated.\n")
+end
+
+function toggleBactaOff()
+	bactaCheck = false
+	disableTrigger("BactaCheck")
+	cecho("&lt;slate_grey&gt;BactaCheck deactivated.\n")
+end
+
+function switchBacta(args)
+   if (args == "on") then
+      toggleBactaOn()
+   else
+      if (args == "off") then
+         toggleBactaOff()
+      else
+         if(bactaCheck == true) then
+            toggleBactaOff()
+         else
+            toggleBactaOn()
+         end
+      end
+   end
+end</script>
+			<eventHandlerList />
+		</Script>
+	</ScriptPackage>
+	<KeyPackage />
+	<VariablePackage>
+		<HiddenVariables />
+		<VariableGroup>
+			<name>bestResult</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+			<Variable>
+				<name>about</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+			<Variable>
+				<name>head</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+		</VariableGroup>
+		<VariableGroup>
+			<name>comlinkList</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+		</VariableGroup>
+		<Variable>
+			<name>autoTransition</name>
+			<keyType>4</keyType>
+			<value>false</value>
+			<valueType>1</valueType>
+		</Variable>
+	</VariablePackage>
+</MudletPackage>

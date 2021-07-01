@@ -1,0 +1,2024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>LotJBuildship</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Shipbuilding</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>GetShipParts</name>
+					<script>getParts()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You don't have a component like that.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>BuildNext</name>
+					<script>buildShip()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(.*)\[ALERT\]\: EMERGENCY COPYOVER \- Keep calm\, we might pull through\!$</string>
+						<string>^(.*) COPYOVER by (.*) \- please remain seated\!$</string>
+						<string>^Where to begin? It all looks so complex...$</string>
+						<string>^You step away from (.*), and realize you've done it all wrong...$</string>
+						<string>^You finish modifying the ship.$</string>
+						<string>^You don't see a ship like that nearby to work on.$</string>
+						<string>^Show what to whom\?$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>FinishedShipMove</name>
+					<script>buildNext()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You step away from your finished (.*)!$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>MoveOnToNextPart</name>
+					<script>buildNextPart()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Your (.*) doesn\'t need any( (.*))? of that\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ShipBotting</name>
+					<script>ReturnFromAFK()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You may now bot again.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>OutofMoves</name>
+					<script>waitForMoves()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You\'re too exhausted to do that right now\!$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>MissingPart</name>
+					<script>buildNextPart()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^I see no (.*) here\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>FollowLeader</name>
+					<script>follow()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(.*) beckons for you to come over to (.*).$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Resting</name>
+					<script>stand()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Nah... You feel too relaxed...$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Upgrade</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>UpgradeNext</name>
+					<script>upgradeNextPart()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You (earn|pay) \d+ credits (to complete the modification|after selling the parts)\.$</string>
+						<string>^That change would take that component \d+ units (over max|below minimum)\.$</string>
+						<string>^Theres not enough room in the ship\! Check your ships \'quota\' value\.$</string>
+						<string>^You can\'t afford to make those modifications right now\!$</string>
+						<string>^Thats not a valid component\! Maybe you should check HELP UPGRADING$</string>
+						<string>^You finish tuning (.*)\.$</string>
+						<string>^This vessel has already been tuned.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>FailUpgrade</name>
+					<script>upgrade()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Hmm\, you didn\'t do much of anything\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>NoShip</name>
+					<script>upgradeNext()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You can\'t seem to find that ship here\!$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="no" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Upgrading</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>UpgradeFinished</name>
+					<script>doTune()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^You finish tuning (.*)$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="no" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ShipbuildingSpam</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>GeneralSpam</name>
+					<script>deleteLine()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(.*) takes (.*) tools and starts to work on (.*)$</string>
+						<string>^(.*)'s droid assists(.*)$</string>
+						<string>^(.*) (gets|drops) (.*)$</string>
+						<string>^You (.*) engineering experience\.$</string>
+						<string>^(.*)steps away from (.*) looking very pleased with(.*)$</string>
+						<string>^$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>YourDroid</name>
+					<script>deleteLine()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Your construction droid assists you!</string>
+						<string>^Your droid gains (.*) experience points\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>2</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>TimeEst</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>HullEst</name>
+					<script>estHull = matches[2]</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Hull:      (.*)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>CircEst</name>
+					<script>estCircuits = matches[2]</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Circuits:  (.*)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>TimeEstStop</name>
+					<script>
+estimateBSTime()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Wear locations:  </string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>2</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>WeapEst</name>
+					<script>estWeapons = matches[2]</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Weapons:   (.*)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>EngEst</name>
+					<script>estEngines = matches[2]</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Engines:   (.*)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>EstimateStart</name>
+				<script>estModel = matches[2]
+enableTrigger("TimeEst")
+</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^This looks like the frame for a (.*)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+		</TriggerGroup>
+	</TriggerPackage>
+	<TimerPackage>
+		<TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+			<name>LotJBuildship</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<time>00:00:30.000</time>
+			<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<name>EnduranceMode</name>
+				<script>buildship()</script>
+				<command></command>
+				<packageName></packageName>
+				<time>00:00:05.040</time>
+			</Timer>
+		</TimerGroup>
+	</TimerPackage>
+	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>LotJBuildship</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Upgrading</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfileName</name>
+					<script>upgradeProfileName(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofilename( +(.*))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfilePartAdd</name>
+					<script>upgradeProfilePartAdd(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofilepartadd (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfilePartList</name>
+					<script>upgradeProfilePartList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofilepartlist$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfilePartRem</name>
+					<script>upgradeProfilePartRem(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofilepartrem (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfilePartClear</name>
+					<script>upgradeProfilePartClear()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofilepartclear$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfileSave</name>
+					<script>upgradeProfileSave()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofilesave$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfileLoad</name>
+					<script>upgradeProfileLoad(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofileload (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfileRem</name>
+					<script>upgradeProfileRem(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofilerem (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeProfileList</name>
+					<script>upgradeProfileList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeprofilelist$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradePush</name>
+					<script>upgradePush()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradepush$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeLoad</name>
+					<script>upgradeLoad(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeload (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeAdd</name>
+					<script>upgradeAdd(matches[2], matches[3])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeadd (.*) (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeRem</name>
+					<script>upgradeRem(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgraderem (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradePrint</name>
+					<script>upgradePrint()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradelist$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeClear</name>
+					<script>upgradeClear()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeclear$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>UpgradeAlias</name>
+					<script>input = tostring(matches[2])
+print(input)
+
+if input == nil then
+	upgrade()
+else
+	upgrade(matches[2])
+end</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgrade(\s+(.*))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeStart</name>
+					<script>upgradeStart()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradestart$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeNext</name>
+					<script>upgradeNext()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradenext$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeNextPart</name>
+					<script>upgradeNextPart()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradenextpart$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeAuto</name>
+					<script>upgradeAuto()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradeauto(\s+(.*))?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>upgradeHelp</name>
+					<script>upgradeHelp(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^upgradehelp(\s*(.*))?$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>BuildshipAliases</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>BuildAuto</name>
+					<script>buildAuto(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildauto(.*)?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>BuildSpam</name>
+					<script>buildSpam(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildspam(.*)?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>AddShipToQueue</name>
+					<script>addShip(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildadd (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ClearBuildList</name>
+					<script>buildshipClear()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildclear$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>BuildList</name>
+					<script>buildshipList()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>buildlist</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>EnduranceToggle</name>
+					<script>enduranceToggle(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildendurance(.*)?</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>PartNames</name>
+					<script>setPartname(matches[2], matches[3])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildpartname (.*) (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ShowPartNames</name>
+					<script>showPartnames()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>buildpartslist</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>BuildShip</name>
+					<script>buildShip()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildship$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>BuildStart</name>
+					<script>buildStart()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildstart$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>BuildNext</name>
+					<script>buildNext()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildnext$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>BuildNextPart</name>
+					<script>buildNextPart()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildnextpart$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>DisplayBuildCommands</name>
+					<script>buildHelp(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^buildhelp(\s*(.*))?$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Autotune</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>SetupTune</name>
+					<script>setupTune(matches[2], matches[3], matches[4])
+</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^autotune (.*) (.*) (.*)$</regex>
+				</Alias>
+			</AliasGroup>
+		</AliasGroup>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>TimeEstimation</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>TimeDelta</name>
+				<script>rawDelta = matches[2]</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^timedelta (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>SkillLevel</name>
+				<script>rawSkill = matches[2]</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^skilllevel (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>CallPart</name>
+				<script>callPart(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^callpart (.*)$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>CallPartManhours</name>
+				<script>getManHours(matches[2])</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^manhours (.*)$</regex>
+			</Alias>
+		</AliasGroup>
+	</AliasPackage>
+	<ActionPackage />
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>LotJBuildship</name>
+			<packageName></packageName>
+			<script>shipParts = {"hull", "circuits", "weapons", "engines"}
+partNames = {
+	hullpart or "hull", 
+	circuitspart or "circuits", 
+	weaponspart or "weapons", 
+	enginespart or "engine"
+	}
+shipQueue = {}
+endurance = false
+afk = false
+autoBuild = false
+shipSpam = false
+currentShip = 0
+currentPart = 0
+tuneprefix = ""
+tunestartnum = 1
+tunecurrentpos = 1
+tuneendnum = 1
+
+-- upgrade stuff
+upgradeList = {}
+upgradeitem = ""
+profile = { name = "", mods = {} }
+autoUpgrade = false
+upgradeppos = 0
+upgradespos = 0
+profiles = {}
+table.load(getMudletHomeDir().."/ScriptFiles/LotJBuildship/upgradeprofiles.lua", profiles)
+
+-- part calc stuff
+rawSkill = 13
+rawDelta = 6
+
+estModel = ""
+estHull = 0
+estCircuits = 0
+estWeapons = 0
+estEngines = 0
+hullRemain = 0
+circRemain = 0
+weapRemain = 0
+engRemain = 0
+secRemain = 0
+minRemain = 0
+hourRemain = 0
+
+
+function round(num, idp)
+  if idp and idp&gt;0 then
+    local mult = 10^idp
+    return math.floor(num * mult + 0.5) / mult
+  end
+  return math.floor(num + 0.5)
+end
+
+function estimateBSTime()
+	timeDelta = tonumber(rawDelta)
+	skillLevel = tonumber(rawSkill)
+	xSkill = skillLevel*2
+   hullRemain = math.ceil(estHull/skillLevel)
+   circRemain = math.ceil(estCircuits/xSkill)
+   weapRemain = math.ceil(estWeapons/xSkill)
+   engRemain = math.ceil(estEngines/xSkill)
+   secRemain = math.ceil((hullRemain+circRemain+weapRemain+engRemain)*timeDelta)
+   minRemain = round(secRemain/60, 2)
+   hourRemain = round(minRemain/60, 1)
+	printEstResult()
+end
+
+function printEstResult()
+   print(" ")
+   cecho("&lt;cyan&gt;All estimates approximate!".."\n")
+   print(" ")
+   cecho("&lt;cyan&gt;Hull needed: "..hullRemain.." Minutes: "..round((hullRemain*timeDelta)/60).."\n")
+   cecho("&lt;cyan&gt;Circuits needed: "..circRemain.." Minutes: "..round((circRemain*timeDelta)/60).."\n")
+   cecho("&lt;cyan&gt;Weapons needed: "..weapRemain.." Minutes: "..round((weapRemain*timeDelta)/60).."\n")
+   cecho("&lt;cyan&gt;Engines needed: "..engRemain.." Minutes: "..round((engRemain*timeDelta)/60).."\n")
+   echo("\n")
+   cecho("&lt;green&gt;Minutes remaining: "..minRemain.."\n")
+   cecho("&lt;green&gt;Hours remaining: "..hourRemain.."\n")
+   print " "
+end
+
+function callPart(args)
+   currShip = tostring(estModel)
+   partModifier = tonumber(args)
+	if partModifier &gt; 1 then
+		currShip = currShip.."s"
+	end
+   send("say I estimate "..minRemain*partModifier.." minutes or "..hourRemain*partModifier.." manhours remaining on "..partModifier.." "..currShip.." and that we will need "..hullRemain*partModifier.." hull, "..circRemain*partModifier.." circuits, "..weapRemain*partModifier.." weapons, and "..engRemain*partModifier.." engines.")
+end
+
+function getManHours(args)
+   totalEngineers = tonumber(args)
+   local rawManHours = (hourRemain/totalEngineers)
+   local manHours = round(rawManHours, 2)
+   send("say If we have "..totalEngineers.." engineers working on this, it will only take about "..manHours*partModifier.." hours.")
+end
+
+function enableEndLine()
+	enableTrigger("EndLine")
+end
+
+function upgradeProfileName(args)
+  if not args or args == "" then
+    cecho("&lt;yellow&gt;Profile name set to '"..profile.name.."'")
+    return
+  end
+  profile.name = string.trim(args)
+  cecho("&lt;yellow&gt;Profile name set to '"..profile.name.."'")
+end
+
+function upgradeProfilePartAdd(args)
+   if not args or args == "" then
+      cecho("&lt;red&gt;Usage: upgradeProfilePartAdd &lt;part&gt; &lt;amount&gt;")
+      return
+   end
+   local addItems = {}
+   if string.find(args, ",", 0, true) then
+      addItems = string.split(args, ",")
+   elseif string.find(args, " ", 0, true) then
+      addItems = string.split(args, " ")
+   else
+      cecho("&lt;red&gt;Usage: upgradeProfilePartAdd &lt;part&gt; &lt;amount&gt;")
+      return
+   end
+   local part = { name = "", amount = 0 }
+	local skip = true
+	for i, v in ipairs(addItems) do
+      if skip then
+         skip = false
+         part.name = string.trim(v)
+      else
+         skip = true
+         v = string.trim(v)
+         part.amount = tonumber(v)
+      if not part.amount then
+         cecho("&lt;red&gt;Usage: upgradeProfilePartAdd &lt;part&gt; &lt;amount&gt;\n ")
+         return
+      end
+      profile.mods[#profile.mods+1] = part
+      cecho("&lt;yellow&gt;("..part.name..","..part.amount..") added to current profile.\n")
+      part = { name = "", amount = 0 }
+      end
+   end
+end
+
+function upgradeProfilePartRem(args)
+  if not args or args == "" then
+    cecho("&lt;red&gt;Usage: upgradeProfilePartRem &lt;item/#&gt;")
+    return
+  end
+  for i, v in ipairs(profile.mods) do
+   string.trim(args)
+    if (tonumber(args) == i) or (string.lower(args) == string.lower(v.name)) then
+      cecho("&lt;yellow&gt;Removed '" .. v.name .. "' from profile part list.")
+      table.remove(profile.mods, i)
+      if (upgradeppos &gt; i) then         -- if our position in the part list is higher than what we remove
+        upgradeppos = upgradeppos - 1   -- decrement the pointer to follow the current item
+      end
+    else
+      if (#profile.mods == i) then
+        cecho("&lt;red&gt;Part '" .. args .. "' not found in profile part list.")
+      end
+    end
+  end
+end
+function upgradeProfilePartClear()
+  profile.mods = {}
+  profile.name = ""
+  cecho("&lt;yellow&gt;Current profile part list cleared.")
+end
+
+function upgradeProfilePartList()
+  cecho("&lt;gray&gt;Current profile part list: \n")
+  local modlist = profile.mods
+  cecho("&lt;gray&gt;|&lt;red&gt;",profile.name,"&lt;gray&gt;|")
+  for k, j in ipairs(modlist) do
+    cecho("&lt;cyan&gt;" .. j.name .. ((j.amount&lt;0 and "") or "+").. j.amount .. "&lt;gray&gt;| ")
+  end
+  echo("\n")
+end
+
+function upgradeProfileSave()
+  if profile.name == "" or #profile.mods == 0 then
+    cecho("&lt;red&gt;Current profile is incomplete, unable to save.")
+    return
+  end
+  profiles[#profiles+1] = profile
+  cecho("&lt;yellow&gt;Profile '"..profile.name.."' saved.")
+  OnPluginSaveState()
+  profile = { name = "", mods = {} }
+end
+
+function upgradeProfileLoad(args)
+  if not args or args == "" then
+    cecho("&lt;red&gt;Usage: upgradeProfileLoad &lt;name/#&gt;")
+    return
+  end
+  if not profiles then
+    cecho("&lt;red&gt;Profile list is empty! Unable to load.")
+    return
+  end
+  for i, v in ipairs(profiles) do
+   string.trim(args) 
+   if (tonumber(args) == i) or (string.lower(args) == string.lower(v.name)) then
+        profile = v
+        cecho("&lt;yellow&gt;Profile '"..profile.name.."' loaded.")
+        return
+    else
+      if (#profiles == i) then
+        cecho("&lt;red&gt;Profile '" .. args .. "' not found in profiles list.")
+      end
+    end
+  end
+end
+
+function upgradeProfileRem(args)
+  if not args or args == "" then
+    cecho("&lt;red&gt;Usage: upgradeProfileRem &lt;name/#&gt;")
+    return
+  end
+  for i, v in ipairs(profiles) do
+   string.trim(args)
+    if (tonumber(args) == i) or (string.lower(args) == string.lower(v.name)) then
+      cecho("&lt;yellow&gt;Removed '" .. v.name .. "' from profiles list.")
+      table.remove(profiles, i)
+    else
+      if (#profile.mods == i) then
+        cecho("&lt;red&gt;Part '" .. args .. "' not found in profiles list.")
+      end
+    end
+  end
+end
+
+function upgradeProfileList()
+  cecho("&lt;gray&gt;Current profiles list: \n")
+  for i, v in ipairs(profiles) do
+    local modlist = v.mods
+    cecho("&lt;gray&gt;" .. i.." | &lt;red&gt;" .. v.name .. "&lt;gray&gt;| ")
+    for k, j in ipairs(modlist) do
+      cecho("&lt;cyan&gt;" .. j.name .. ((j.amount&lt;0 and "") or "+").. j.amount .. "&lt;gray&gt; | ")
+    end
+    echo("\n")
+  end
+end
+
+function upgradePush(args)
+  if profile.name == "" then
+    cecho("&lt;red&gt;Current profile is missing a name, unable to push it onto the work list.\n")
+    return
+  end
+  if not profile.mods then
+    cecho("&lt;red&gt;Current profile's mod list is empty, unable to push it onto the work list.\n")
+    return
+  end
+  upgradeList[#upgradeList+1] = profile
+  cecho("&lt;yellow&gt;Profile '"..profile.name.."' pushed onto the upgradeList work list.\n")
+  profile = { name = "", mods = {} }
+end
+
+function upgradeLoad(args)
+  if not args or args == "" then
+    cecho("&lt;red&gt;Usage: upgradeLoad &lt;ship&gt; &lt;profile/#&gt;\n")
+    return
+  end
+  local addItems = {}
+  if string.find(args, ",", 0, true) then
+    addItems = string.split(args, ",")
+  elseif string.find(args, " ", 0, true) then
+    addItems = string.split(args, " ")
+  else
+  	cecho("&lt;red&gt;Usage: upgradeLoad &lt;ship&gt; &lt;profile/#&gt;\n")
+	  return
+	end
+  local ship = { name = "", mods = {} }
+	local skip = true
+	for k, j in ipairs(addItems) do
+	  if skip then
+	    skip = false
+	    ship.name = string.trim(j)
+	  else
+	    skip = true
+	    local found = false
+	    for i, v in ipairs(profiles) do
+        j = string.trim(j)
+        if (tonumber(j) == i) or (string.lower(j) == string.lower(v.name)) then
+          found = true
+          ship.mods = table.deepcopy(v.mods)
+          upgradeList[#upgradeList+1] = ship
+          cecho("&lt;yellow&gt;Ship '"..ship.name.."' added to queue using profile '"..v.name.."'.\n")
+          ship = { name = "", mods = {} }
+        end -- if
+      end -- for
+      if not found then
+            cecho("&lt;red&gt;Profile '" .. j .. "' not found in profiles list.\n")
+      else
+        found = false
+      end -- if
+    end -- if
+  end -- for
+end
+
+function upgradeAdd(line, args)
+  if not args or line == "" or args == "" then
+    cecho("&lt;red&gt;Usage: upgradeAdd &lt;ship&gt; &lt;parameters&gt;\n")
+    return
+  end
+  local addItems = {}
+  if string.find(args, ",", 0, true) then
+    addItems = string.split(args, ",")
+  elseif string.find(args, " ", 0, true) then
+    addItems = string.split(args, " ")
+  else
+  	cecho("&lt;red&gt;Usage: upgradeAdd &lt;ship&gt; &lt;parameters&gt;\n")
+	  return
+	end
+  local ship = { name = string.trim(line), mods = {} }
+  local mod = { name = "", amount = 0 }
+	local skip = true
+	for i, v in ipairs(addItems) do
+	  if skip then
+	    skip = false
+	    mod.name = string.trim(v)
+	  else
+	    skip = true
+       v = string.trim(v)
+	    mod.amount = tonumber(v)
+	    if not mod.amount then
+	      cecho("&lt;red&gt;Usage: upgradeAdd &lt;ship&gt; &lt;parameters&gt;\n")
+	      return
+	    end
+	    ship.mods[#ship.mods+1] = mod
+	    mod = { name = "", amount = 0 }
+	  end
+	end
+	upgradeList[#upgradeList+1] = ship
+	cecho("&lt;yellow&gt;Added '"..ship.name.."' to upgrade list using custom profile.\n")
+end
+
+function upgradeRem(args)
+  if not args or args == "" then
+    cecho("&lt;red&gt;Usage: upgradeRem &lt;name/#&gt;")
+    return
+  end
+  for i, v in ipairs(upgradeList) do
+   string.trim(args)
+    if (tonumber(args) == i) or (string.lower(args) == string.lower(v.name)) then
+      cecho("&lt;yellow&gt;Removed '" .. v.name .. "' from upgrade list.\n")
+      table.remove(upgradeList, i)
+      return
+    else
+      if (#upgradeList == i) then
+        cecho("&lt;red&gt;Ship '" .. args .. "' not found in upgrade list.\n")
+      end
+    end
+  end
+end
+
+function upgradePrint()
+  cecho("&lt;gray&gt;Current upgrade list: \n")
+  for i, v in ipairs(upgradeList) do
+    local modlist = v.mods
+    cecho("&lt;gray&gt;" .. i.." | " .. ((upgradespos == i and "&lt;green&gt;") or "&lt;red&gt;") .. v.name .. "&lt;gray&gt; | \n")
+    for k, j in ipairs(modlist) do
+      cecho((((upgradeppos == k and upgradespos == i) and "&lt;green&gt;") or "&lt;cyan&gt;") .. j.name .. "&lt;gray&gt; " .. (((upgradeppos == k and upgradespos == i) and "&lt;green&gt;") or "&lt;cyan&gt;") .. ((j.amount&lt;0 and "") or "+")..j.amount .. "&lt;gray&gt; | ")
+    end
+    echo("\n")
+  end
+end
+
+function upgradeClear()
+  upgradeList = {}
+  upgradeppos = 0
+  upgradespos = 0
+  cecho("&lt;yellow&gt;Current upgrade list cleared.")
+end
+
+function upgrade(args)
+  if not args or args == "" then -- entered nothing
+    if (upgradespos &gt; 0) and (upgradeppos &gt; 0) then -- we're using a list
+      if (getUpgradePartAmount() &gt; 0) then -- part amount is over 0
+        send("upgradeship "..getUpgradeShipName().." "..getUpgradePartName().." "..getUpgradePartAmount())
+      elseif (getUpgradePartAmount() &lt; 0) then -- part amount is under 0
+        send("dismantle "..getUpgradeShipName().." "..getUpgradePartName().." "..math.abs(getUpgradePartAmount()))
+      elseif string.lower(getUpgradePartName()) == "tune" or string.lower(getUpgradePartName()) == "tuneship" then -- tune the ship
+        send("tuneship "..getUpgradeShipName())
+      else -- should never get here, but just in case someone entered 0 as an amount, skip to the next part
+        upgradeNextPart()
+      end
+    else -- we're not using a list
+      disableUpgrade()
+    end
+  else -- entered one item
+    if string.trim(args) == "" then -- clean up blank arguments messing up things
+      upgrade()
+      return
+    end
+    upgradeitem = string.trim(args)
+    upgradespos = 0
+    upgradeppos = 0
+    send("upgradeship "..upgradeitem)
+  end
+  enableTrigger("Upgrade")
+end
+
+function upgradeStart()
+  upgradespos = 0
+  upgradeppos = 0
+  upgradeitem = ""
+  enableUpgrade()
+  upgradeNext()
+end
+
+function upgradeNext()
+  if upgradeitem ~= "" then -- we're not using the list
+    upgrade()
+    return
+  else -- we are using a list
+    upgradespos = upgradespos + 1
+    if upgradespos &gt; #upgradeList then -- we're at the end of the list
+      cecho("&lt;yellow&gt;Auto upgrade finished.")
+      disableUpgrade()
+    else -- we're in the middle of the list
+      upgradeppos = 0
+      upgradeNextPart()
+    end
+  end
+end
+
+function upgradeNextPart()
+  upgradeppos = upgradeppos + 1
+  if upgradeppos &gt; #getUpgradeShipMods() then -- we're at the end of the list
+      upgradeNext()
+  else -- we're in the middle of the list
+      upgrade()
+  end
+end
+
+function getUpgradeShip()
+  if #upgradeList == 0 or upgradespos == 0 then
+    return {}
+  end
+  return upgradeList[upgradespos]
+end
+
+function getUpgradeShipName()
+  if not getUpgradeShip() then
+    return ""
+  end
+  return getUpgradeShip().name
+end
+
+function getUpgradeShipMods()
+  if not getUpgradeShip() then
+    return {}
+  end
+  return getUpgradeShip().mods
+end
+
+function getUpgradePart()
+  if #upgradeList == 0 or upgradespos == 0 then
+    return ""
+  end
+  local ship = upgradeList[upgradespos]
+  if not ship.mods or #ship.mods == 0 or upgradeppos == 0 then
+    return ""
+  end
+  return ship.mods[upgradeppos]
+end
+
+function getUpgradePartName()
+  return getUpgradePart().name
+end
+
+function getUpgradePartAmount()
+  return getUpgradePart().amount
+end
+
+function upgradeClear()
+  upgradeList = {}
+  upgradespos = 0
+  upgradeppos = 0
+  upgradeitem = ""
+  cecho("&lt;yellow&gt;Upgrade list cleared.")
+  disableUpgrade()
+end
+
+function upgradeAuto(args)
+   string.trim(args)
+  if not args or args == "" then
+    if autoUpgrade then
+      disableUpgrade()
+    else
+      enableUpgrade()
+    end
+  elseif string.lower(args) == "on" then
+    enableUpgrade()
+  else
+    disableUpgrade()
+  end
+end
+
+function enableUpgrade()
+  if autoUpgrade then
+    return
+  end
+  autoUpgrade = true
+  enableTrigger("Upgrading")
+  cecho("&lt;yellow&gt;Auto upgrade enabled.\n")
+end
+
+function disableUpgrade()
+  if not autoUpgrade then
+    return
+  end
+  autoUpgrade = false
+  disableTrigger("Upgrading")
+  cecho("&lt;yellow&gt;Auto upgrade disabled.\n")
+end
+
+function follow(args)
+  if not args or args == "" then
+    return
+  end
+  if afk then
+    send("afk")
+    send("follow "..args)
+    send("afk")
+  else
+    send("follow "..args)
+    buildShip()
+  end
+end
+
+function stand()
+  send("stand")
+  buildShip()
+end
+
+function addShip(wildcards)
+	local addLines = string.split(wildcards, ",") -- add multiple items using commas as delimiters
+	if addLines then
+		for i=1,#addLines, 1 do
+			shipQueue[#shipQueue + 1] = addLines[i]
+			cecho("&lt;lawn_green&gt;Added '" .. shipQueue[#shipQueue] .. "' to ship queue.\n")
+		end
+	else
+		shipQueue[#shipQueue + 1] = wildcards
+		cecho("&lt;lawn_green&gt;Added '" .. shipQueue[#shipQueue] .. "' to ship queue.\n")
+	end
+end -- function
+
+function buildStart()
+	if (autoBuild) then  --  if you were previously building	
+		for i = 1, #partNames, 1 do
+			send("drop all." .. partNames[i] .. "\n") -- drop all previously used parts to start fresh
+		end -- for
+	end
+	if (#shipQueue &gt; 0) then -- we have stuff to build!
+		currentShip = 0
+		toggleBuildshipOn()
+		toggleSpamOn()
+		buildNext()
+	else -- nothing to build!
+		abort()
+	end
+end -- function
+
+function buildShip()
+  if not shipQueue[currentShip] or not shipParts[currentPart] then
+    abort()
+    return
+  end
+  send("buildship " .. shipQueue[currentShip] .. " " .. shipParts[currentPart])
+end
+
+function buildNext()
+	if (autoBuild) then  --  if you were previously building	
+		for i = 1, #partNames, 1 do
+			send("drop all." .. partNames[i]) -- drop all previously used parts to start fresh
+		end -- for
+	end
+	currentShip = currentShip + 1
+	if (currentShip &gt; #shipQueue) then -- if we're at the end of the list
+		abort()
+	else
+		currentPart = 0
+		buildNextPart()
+	end
+end -- function
+
+function abort()
+	cecho("&lt;lawn_green&gt;&gt;Shipbuilding complete.")
+	disableEndurance()
+	toggleSpamOff()
+	toggleBuildshipOff()
+	for i = 1, #partNames, 1 do
+		send("drop all." .. partNames[i])
+	end -- for
+end
+
+function buildNextPart()
+	if (currentPart &gt; 0) then
+		send("drop all." .. partNames[currentPart])
+	end
+	currentPart = currentPart + 1
+	if (currentPart &gt; #partNames) then
+		currentPart = 1
+		buildNext()
+	else
+	  getParts()
+	end -- if
+end -- function
+
+function ReturnFromAFK()
+	if (afk) then
+		send("afk")
+	end
+	send("bot start")
+	if (endurance == true) then
+		enableEndurance()
+	else
+		buildShip()
+	end -- if
+end -- function
+
+function getParts()
+	send("get 100 " .. partNames[currentPart])
+	buildShip()
+end -- function
+
+
+function setPartname(oldname, newname)
+	if (oldname == "hull") then
+		partNames[1] = newname
+		cecho("&lt;lawn_green&gt;Part type '" .. shipParts[1] .. "' coupled with '" .. partNames[1] .. "'\n")
+	elseif (oldname == "circuits") then
+		partNames[2] = newname
+		cecho("&lt;lawn_green&gt;Part type '" .. shipParts[2] .. "' coupled with '" .. partNames[2] .. "'\n")
+	elseif (oldname == "engines") then
+		partNames[3] = newname
+		cecho("&lt;lawn_green&gt;Part type '" .. shipParts[3] .. "' coupled with '" .. partNames[3] .. "'\n")
+	elseif (oldname == "weapons") then
+		partNames[4] = newname
+		cecho("&lt;lawn_green&gt;Part type '" .. shipParts[4] .. "' coupled with '" .. partNames[4] .. "'\n")
+	else
+		cecho("&lt;red&gt;Part type not found")
+	end -- if
+   OnPluginSaveState()
+end -- function
+
+function showPartnames()
+	cecho("&lt;gray&gt;Partnames are as follows: \n")
+	for i, v in ipairs(shipParts) do
+		if (currentPart == i) then
+			cecho("&lt;green&gt;--]&gt;" .. shipParts[i] .. " = " .. partNames[i] .. "&lt;[--\n")
+		else
+			cecho("&lt;gray&gt;" .. shipParts[i] .. " = " .. partNames[i] .. "\n")
+		end
+	end -- for
+end -- function
+
+function buildshipList()
+	cecho("&lt;gray&gt;Ship Queue Contains: \n")
+	for i, v in ipairs(shipQueue) do
+		if (currentShip == i) then
+			cecho("&lt;green&gt;--]&gt;" .. i .. ") "..shipQueue[i].."&lt;[--\n")
+		else
+			cecho("&lt;gray&gt;" .. i .. ") "..shipQueue[i] .. "\n")
+		end
+	end -- for
+	showPartnames()
+end -- function
+
+
+function afkOn()
+	afk = true
+end
+
+function afkOff()
+	afk = false
+end
+
+function toggleBuildshipOn()
+	send("config -prompt")
+	enableTrigger("Shipbuilding")
+	autoBuild = true
+	cecho("&lt;lawn_green&gt;Shipbuilding activated.")
+end
+
+function toggleBuildshipOff()
+	send("config +prompt")
+	disableTrigger("Shipbuilding")
+	autoBuild = false
+	cecho("&lt;lawn_green&gt;Shipbuilding deactivated.")
+end
+
+function buildAuto(args)
+	if (args ~= "") then -- arg found
+		if (string.trim(args) == "on") then -- turn on
+			toggleBuildshipOn()
+		elseif (string.trim(args) == "off") then -- turn off
+			toggleBuildshipOff()
+		else
+			cecho("&lt;red&gt;Unrecognized argument given to buildAuto: " .. args)
+		end
+	else -- no arg found
+		if (autoBuild == false) then -- turn on
+			toggleBuildshipOn()
+		else
+			toggleBuildshipOff()
+		end
+	end
+end
+
+function toggleSpamOn()
+	enableTrigger("ShipbuildingSpam")
+	shipSpam = true
+	cecho("&lt;lawn_green&gt;Shipbuilding spam gagged.")
+end
+
+function toggleSpamOff()
+	disableTrigger("ShipbuildingSpam")
+	shipSpam = false
+	cecho("&lt;lawn_green&gt;Shipbuilding spam shown.")
+end
+
+function buildSpam(args)
+	if (args ~= "") then -- arg found
+		if (string.trim(args) == "on") then -- turn on
+			toggleSpamOn()
+		elseif (string.trim(args) == "off") then -- turn off
+			toggleSpamOff()
+		else
+			cecho("&lt;red&gt;Unrecognized argument given to buildSpam: " .. args)
+		end
+	else -- no arg found
+		if (shipSpam == false) then -- turn on
+			toggleSpamOn()
+		else
+			toggleSpamOff()
+		end
+	end
+end
+
+function TidyUp()
+	deleteLine()
+end -- function
+
+function buildshipClear()
+	shipQueue = {}
+	cecho("&lt;lawn_green&gt;Ship Build List Cleared!")
+end -- function
+
+function waitForMoves()
+  send("rest")
+  tempTimer(120, [[send("stand")]])
+  tempTimer(121, function() buildShip() end)
+end
+
+function disableEndurance()
+  if not endurance then
+    return
+  end
+	disableTimer("EnduranceMode")
+	enableTrigger("ContinueTheShip")
+	enableTrigger("FailedBuildShip")
+	cecho("&lt;red&gt;Endurance Mode Deactivated")
+	endurance = false
+end -- function
+
+function enableEndurance()
+  if endurance then
+    return
+  end
+	enableTimer("EnduranceMode")
+	disableTrigger("ContinueTheShip")
+	disableTrigger("FailedBuildShip")
+	cecho("&lt;lawn_green&gt;Endurance Mode Activated")
+	endurance = true
+end -- function
+
+function enduranceToggle(args)
+	if (args ~= "") then -- arg found
+		if (string.trim(args) == "on") then -- turn on
+			enableEndurance()
+		elseif (string.trim(args) == "off") then -- turn off
+			disableEndurance()
+		else
+			cecho("&lt;red&gt;Unrecognized argument given to buildendurance: " .. args)
+		end
+	else -- no arg found
+		if (endurance == false) then -- turn on
+			enableEndurance()
+		else
+			disableEndurance()
+		end
+	end
+end
+
+function OnPluginSaveState()
+	hullpart = partNames[1]
+	circuitspart = partNames[2]
+	weaponspart = partNames[3]
+	enginespart = partNames[4]
+   table.save(getMudletHomeDir().."/ScriptFiles/LotJBuildship/upgradeprofiles.lua", profiles)
+end -- OnPluginSaveState
+
+function BuildCommandHelp(name, list, wildcards)
+	cecho("&lt;lawn_green&gt;buildadd #- Add a ship to the build queue\n")
+	cecho("&lt;lawn_green&gt;buildclear - Clear the ship queue\n")
+	cecho("&lt;lawn_green&gt;buildlist - Display the build queue\n")
+	cecho("&lt;lawn_green&gt;buildship - Builds current ship\n")
+	cecho("&lt;lawn_green&gt;buildstart - Begin building first ship in list\n")
+	cecho("&lt;lawn_green&gt;buildnext - Skip to next ship in the list\n")
+	cecho("&lt;lawn_green&gt;buildnextpart - Skip to next part in current ship\n")
+	cecho("&lt;lawn_green&gt;buildendurance on/off - Turn the timer setting on and off. Useful for not running out of movement on smaller ships\n")
+	cecho("&lt;lawn_green&gt;buildpartname &lt;buildname&gt; &lt;getname&gt; - Change the name of a part name to match the item you pick up\n")
+	cecho("&lt;lawn_green&gt;buildpartslist - Display the relations between parts and their pickup names\n")
+	cecho("&lt;lawn_green&gt;buildauto on/off - Turn automatic building on or off.\n")
+	cecho("&lt;lawn_green&gt;buildspam on/off - Turn the build spam filters on or off.\n")
+end -- function
+
+-- define our build help command structure
+buildcommands = { { name = "buildAdd", desc = "Adds a new ship to the shipbuilding queue.",
+                         args = { { name = "&lt;name&gt;", desc = "Adds the given ship name to the shipbuilding queue."}, }
+                          },
+               { name = "buildClear", desc = "Clears the current shipbuilding queue.",
+                        args = { }
+                          },
+               { name = "buildList", desc = "Displays the current shipbuilding queue.",
+                        args = { }
+                          },
+               { name = "buildShip", desc = "Performs a single shipbuilding command.",
+                        args = { }
+                          },
+               { name = "buildStart", desc = "Begins building ships from the beginning of the queue.",
+                        args = { }
+                          },
+               { name = "buildNext", desc = "Skips to the next ship in the build queue and starts building.",
+                        args = { }
+                          },
+               { name = "buildNextPart", desc = "Skips to the next part on the current ship.",
+                        args = { }
+                          },
+               { name = "buildEndurance", desc = "Toggles endurance mode building on or off.",
+                        args = { }
+                          },
+               { name = "buildPartName", desc = "Assigns a new part name to the specified component type.",
+                        args = { { name = "&lt;partname&gt; &lt;parttype&gt;", desc = "Assigns a new &lt;partname&gt; to the specified &lt;parttype&gt; if the item used for building has a different keyword."}, }
+                          },
+               { name = "buildPartsList", desc = "Displays the currently assigned part names.",
+                        args = { }
+                          },
+               { name = "buildAuto", desc = "Toggles automatic building on or off.",
+                        args = { { name = "&lt;on/off&gt;", desc = "Sets automatic building to the given mode."}, }
+                          },
+               { name = "buildSpam", desc = "Toggles whether shipbuilding spam is shown or removed from the screen.",
+                        args = { { name = "&lt;on/off&gt;", desc = "Sets building spam display to the given mode."}, }
+                          },
+               { name = "buildHelp", desc = "Display this help file.",
+                        args = { { name = "&lt;command&gt;", desc = "Display more detailed help information on the given command."} }
+                          },
+               { name = "upgradeHelp", desc = "Display help file for upgrading commands.",
+                        args = { { name = "&lt;command&gt;", desc = "Display more detailed help information on the given command."} }
+                          },
+
+                           }
+
+function buildHelp(args)
+  local found = false
+  if args == "" then -- show general help
+    cecho("&lt;white&gt;","LotJBuildship v 1.0 by Johnson. Enter 'buildhelp &lt;command&gt;' for more detailed information.\n")
+    for a, b in ipairs(buildcommands) do -- commands
+      local command = b
+      cecho("&lt;gray&gt;" .. string.format("%-20s", command.name).." : "..command.desc .. "\n")
+    end
+    print("")
+  else -- entered something
+    cecho("&lt;white","black","LotJBuildship v 1.0 by Johnson. Enter 'buildhelp' for more general information.\n")
+
+    for a, b in ipairs(buildcommands) do -- scroll through commands
+      string.trim(args)
+      if (string.lower(b.name) == string.lower(args)) then -- found our argument
+        found = true
+        cecho("&lt;gray&gt;" .. b.name .. " : " .. b.desc .. "\n")
+        cecho("&lt;gray&gt;Available arguments:")
+        if #b.args == 0 then -- no arguments
+          cecho("&lt;gray&gt;   None.")
+        else -- arguments to print
+          for i, k in ipairs(b.args) do
+            cecho("&lt;gray&gt;" .. string.format("%20s", k.name).." : " .. k.desc .. "\n")
+          end -- end print arguments
+        end -- end no arguments
+        echo("\n")
+      end -- end found command
+    end -- end scroll commands
+    if not found then
+      cecho("&lt;gray&gt;Command '"..args.."' not found. \n")
+    end
+  end -- end no input
+end
+
+-- define our upgrade help command structure
+upgradecommands = { { name = "upgradeProfileName", desc = "Changes the name of the profile to be added.\n",
+                         args = { { name = "&lt;none&gt;", desc = "Displays the current profile's name.\n" },
+                                  { name = "&lt;name&gt;", desc = "Specifies the name of the current profile."}, }
+                          },
+               { name = "upgradeProfilePartAdd", desc = "Adds a part to the profile's part list.\n",
+                        args = { { name = "&lt;name&gt; &lt;amount&gt;", desc = "Adds a part to the profile's part list.\n"}, }
+                          },
+               { name = "upgradeProfilePartRem", desc = "Removes a part from the profile's part list.\n",
+                        args = { { name = "&lt;name&gt;", desc = "Removes a part matching the given name from the profile's part list.\n"},
+                                 { name = "&lt;number&gt;", desc = "Removes the list # from the profile's part list.\n"}, }
+                          },
+               { name = "upgradeProfilePartClear", desc = "Deletes the current profile's part list.\n",
+                        args = { }
+                          },
+               { name = "upgradeProfilePartList", desc = "Displays the current profile's part list.\n",
+                        args = { }
+                          },
+               { name = "upgradeProfileSave", desc = "Saves the current profile into memory.\n",
+                        args = { }
+                          },
+               { name = "upgradeProfileLoad", desc = "Loads a saved profile into the current profile slot.\n",
+                        args = { { name = "&lt;name&gt;", desc = "Loads the profile matching the given name into the current profile slot.\n"}, 
+                                 { name = "&lt;number&gt;", desc = "Loads the profile in the given # into the current profile slot.\n"}, }
+                          },
+               { name = "upgradeProfileRem", desc = "Removes a profile from memory.\n",
+                        args = { { name = "&lt;name&gt;", desc = "Removes the profile matching the given name from memory.\n"},
+                                 { name = "&lt;number&gt;", desc = "Removes the profile located at the given number from memory.\n"},  }
+                          },
+               { name = "upgradeProfileList", desc = "Displays the list of saved profiles.\n",
+                        args = { }
+                          },
+               { name = "upgradePush", desc = "Adds the current profile into the upgradeList queue without saving it to memory.\n",
+                        args = { }
+                          },
+               { name = "upgradeLoad", desc = "Loads a ship to the upgradeList queue using a saved profile.\n",
+                        args = { { name = "&lt;ship&gt; &lt;profile&gt;", desc = "Adds &lt;ship&gt; to the upgradeList queue using the given &lt;profile&gt; modification list.\n"}, 
+                                 { name = "&lt;ship&gt; &lt;number&gt;", desc = "Adds &lt;ship&gt; to the upgradeList queue using the profile located at &lt;number&gt;.\n"}, }
+                          },
+               { name = "upgradeAdd", desc = "Adds a ship to the upgradeList queue using a custom profile.\n",
+                        args = { { name = "&lt;ship&gt; &lt;part1&gt; &lt;amount1&gt; &lt;part2&gt; &lt;amount2&gt;", desc = "Adds &lt;ship&gt; to the upgradeList queue using the given modification list.\n"}, 
+                                 { name = "&lt;ship&gt; &lt;part1&gt;,&lt;amount1&gt;,&lt;part2&gt;,&lt;amount2&gt;", desc = "Adds &lt;ship&gt; to the upgradeList queue using the given modification list.\n"}, }
+                          },
+               { name = "upgradeRem", desc = "Removes a ship from the upgradeList queue.\n",
+                        args = { { name = "&lt;name&gt;", desc = "Removes all ships matching the given name from the upgradeList queue.\n"}, 
+                                 { name = "&lt;number&gt;", desc = "Removes the ship located at the given number from the upgradeList queue.\n"}, }
+                          },
+               { name = "upgradeList", desc = "Displays the current upgradeList queue.\n",
+                        args = { }
+                          },
+               { name = "upgradeClear", desc = "Deletes the current upgradeList queue.\n",
+                        args = { }
+                          },
+               { name = "upgrade", desc = "Performs an upgrade based on the current script position, or a new upgrade based on string given.\n",
+                        args = { { name = "&lt;none&gt;", desc = "Performs an upgrade based on the current script positions.\n"}, 
+                                 { name = "&lt;ship&gt; &lt;item&gt; &lt;amount&gt;", desc = "Performs a new upgrade independent from the script.\n"},  }
+                          },
+               { name = "upgradeStart", desc = "Begins upgrading from the beginning of the current upgradeList queue.\n",
+                        args = { }
+                          },
+               { name = "upgradeNext", desc = "Begins upgrade the next ship in the upgradeList queue.\n",
+                        args = { }
+                          },
+               { name = "upgradeNextPart", desc = "Skips to the next part in the current ship.\n",
+                        args = { }
+                          },
+               { name = "upgradeAuto", desc = "Toggles automatic upgrading on or off.\n",
+                        args = { { name = "&lt;none&gt;", desc = "Toggles automatic upgrading on or off.\n"},
+                                 { name = "&lt;on/off&gt;", desc = "Turns automatic upgrading on or off based on given command.\n"}, }
+                          },
+
+               { name = "upgradehelp", desc = "Display this help file.\n",
+                        args = { { name = "&lt;command&gt;", desc = "Display more detailed help information on the given command.\n"} }
+                          },
+               { name = "buildHelp", desc = "Display help file for shipbuilding commands.\n",
+                        args = { { name = "&lt;command&gt;", desc = "Display more detailed help information on the given command.\n"} }
+                          },
+                           }
+                           
+--upgradeProfileName &lt;name&gt;                 Changes the name of the profile to be added.
+--upgradeProfilePartAdd &lt;name&gt; &lt;amount&gt;     Adds a part to the profile's part list.
+--upgradeProfilePartRem &lt;name/#&gt;            Removes a part from the profile's part list.
+--upgradeProfilePartClear                   Clears the profile's part list.
+--upgradeProfilePartList                    Lists the profile's part list.
+--upgradeProfileSave &lt;name&gt;                 Saves the staging ship as a profile to be reused.
+--upgradeProfileLoad &lt;name/#&gt;               Loads a profile into the current staging ship.
+--upgradeProfileRem &lt;name/#&gt;                Removes a profile from your saved list.
+--upgradeProfileList                        Lists all of your saved ship profiles.
+--upgradePush                               Pushes the current profile onto the work list without saving.
+--upgradeAdd &lt;shipname&gt; &lt;profilename&gt;       Adds a ship to be worked on using profile.
+--upgradeRem &lt;shipname/#&gt;                   Removes a ship from the list using name/number.
+--upgradeList                               Lists the current upgrade list.
+--upgradeClear                              Clears the current upgrade list.
+--upgradeStart                              Starts upgrading from beginning of list.
+--upgradeNext                               Starts upgrading next ship in list.
+--upgradeNextPart                           Starts upgrading next part in profile list.
+
+function upgradeHelp(args)
+  local found = false
+  if args == "" then -- show general help
+    cecho("&lt;white&gt;LotJUpgrade v 1.0 by Johnson. Enter 'upgradehelp &lt;command&gt;' for more detailed information.")
+    for a, b in ipairs(upgradecommands) do -- commands
+      local command = b
+      cecho("&lt;gray&gt;" .. string.format("%-20s", command.name).." : "..command.desc)
+    end
+    print("")
+  else -- entered something
+    cecho("&lt;white&gt;LotJUpgrade v 1.0 by Johnson. Enter 'upgradehelp' for more general information.")
+    for a, b in ipairs(upgradecommands) do -- scroll through commands
+      string.trim(args)
+      if (string.lower(b.name) == string.lower(args)) then -- found our argument
+        found = true
+        cecho("&lt;gray&gt;" .. b.name .. " : " .. b.desc)
+        cecho("&lt;gray&gt;Available arguments:")
+        if #b.args == 0 then -- no arguments
+          cecho("&lt;gray&gt;   None.")
+        else -- arguments to print
+          for i, k in ipairs(b.args) do
+            cecho("&lt;gray&gt;" .. string.format("%20s", k.name).." : " .. k.desc)
+          end -- end print arguments
+        end -- end no arguments
+        print("")
+      end -- end found command
+    end -- end scroll commands
+    if not found then
+      cecho("&lt;gray&gt;Command '"..args.."' not found.")
+    end
+  end -- end no input
+end
+
+
+tuneprefix = ""
+tunestartnum = 1
+tunecurrentpos = 1
+tuneendnum = 1
+
+function setupTune(tuneshipprefix, tunestartpos, tuneendpos)
+   tuneprefix = tostring(tuneshipprefix)
+   tunestartnum = tonumber(tunestartpos)
+   tuneendnum = tonumber(tuneendpos)
+   tunecurrentpos = tunestartnum
+   cecho("Ship prefix: " .. tuneprefix .. "\n")
+   cecho("Tuning ships from " .. tunestartnum .. " to " .. tuneendnum .. "\n")
+   startTune()
+   tunecurrentpos = tunestartnum+1
+end
+
+function startTune()
+   local i = tonumber(tunecurrentpos)
+   tunecurrentpos = string.format("%02d", i)
+   send("tuneship " .. tuneprefix .. tunecurrentpos .. "\n")
+end
+
+function doTune()
+   local i = tonumber(tunecurrentpos)
+   tunecurrentpos = string.format("%02d", i)
+   if i &lt;= tuneendnum then
+      send("tuneship " .. tuneprefix .. tunecurrentpos .. "\n")
+      tunecurrentpos = tonumber(i+1)
+   else
+      cecho("&lt;green&gt;Tuning complete!")
+   end -- if
+end -- function
+
+function tuneStartFail()
+   local i = tonumber(tunecurrentpos)
+   tunecurrentpos = string.format("%02d", i)
+   if i &lt;= tuneendnum then
+      send("tuneship " .. tuneprefix .. tunecurrentpos .. "\n")
+   else
+      cecho("&lt;green&gt;Tuning complete!")
+   end -- if
+end -- function
+
+function tuneEndFail()
+   local i = tonumber(tunecurrentpos-1)
+   tunecurrentpos = string.format("%02d", i)
+   if i &lt;= tuneendnum then
+      send("tuneship " .. tuneprefix .. tunecurrentpos .. "\n")
+   else
+      cecho("&lt;green&gt;Tuning complete!")
+   end -- if
+end -- function</script>
+			<eventHandlerList />
+		</Script>
+	</ScriptPackage>
+	<KeyPackage />
+	<VariablePackage>
+		<HiddenVariables />
+		<VariableGroup>
+			<name>bestResult</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+			<Variable>
+				<name>about</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+			<Variable>
+				<name>head</name>
+				<keyType>4</keyType>
+				<value>0</value>
+				<valueType>3</valueType>
+			</Variable>
+		</VariableGroup>
+		<VariableGroup>
+			<name>comlinkList</name>
+			<keyType>4</keyType>
+			<value></value>
+			<valueType>5</valueType>
+		</VariableGroup>
+		<Variable>
+			<name>autoTransition</name>
+			<keyType>4</keyType>
+			<value>false</value>
+			<valueType>1</valueType>
+		</Variable>
+	</VariablePackage>
+</MudletPackage>
